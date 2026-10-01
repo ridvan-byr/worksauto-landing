@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "WorksAuto | Yeni Nesil Bulut Tabanlı Oto Servis Yönetim Sistemi",
   description:
-    "Oto servisleri ve özel atölyeler için iş emri, dijital araç kabul, randevu, stok takibi, B2B cari hesap ve GİB e-fatura yönetim platformu. Hemen 14 gün ücretsiz deneyin.",
+    "Oto servisleri ve özel atölyeler için iş emri, dijital araç kabul, randevu, stok takibi, B2B cari hesap ve GİB e-fatura yönetim platformu. Canlı demo talep edin.",
   keywords: [
     "oto servis programı",
     "oto servis yönetim yazılımı",

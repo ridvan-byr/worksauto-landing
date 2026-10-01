@@ -33,11 +33,7 @@ export function RoiCalculator() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
-            <Calculator size={13} />
-            <span>KAZANÇ & YATIRIM GETİRİSİ (ROI)</span>
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight mt-4">
+          <h2 className="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight">
             WorksAuto Servisinize{" "}
             <span className="text-emerald-400">Ne Kadar Ek Kazanç</span> Sağlar?
           </h2>

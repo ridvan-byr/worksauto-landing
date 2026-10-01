@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Check, Sparkles, ArrowRight, ShieldCheck, Zap } from "lucide-react";
+import { Check, ArrowRight, ShieldCheck, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface PricingSectionProps {
@@ -54,7 +54,7 @@ export function PricingSection({ onOpenDemo }: PricingSectionProps) {
     },
     {
       title: "Ücretsiz Veri Taşıma & Destek",
-      desc: "Eski Excel/program verileriniz ekibimizce ücretsiz aktarılır, 7/24 destek.",
+      desc: "Eski Excel ve program verileriniz ekibimizce ücretsiz aktarılır, 7/24 destek.",
     },
   ];
 
@@ -65,13 +65,9 @@ export function PricingSection({ onOpenDemo }: PricingSectionProps) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8fb4ff] bg-[#2357c5]/10 border border-[#3b72ea]/20 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
-            <Sparkles size={12} />
-            <span>TEK PLAN — HER ŞEY DAHİL</span>
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight mt-4">
-            Karmaşık Paketler Yok.{" "}
-            <span className="text-[#8fb4ff]">Tüm Güç Tek Fiyatta.</span>
+          <h2 className="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight">
+            Şeffaf Fiyatlandırma.{" "}
+            <span className="text-[#8fb4ff]">Tüm Güç Tek Pakette.</span>
           </h2>
           <p className="text-sm sm:text-base text-[#9caac0] mt-4 leading-relaxed">
             Servisinizin büyüklüğü ne olursa olsun tüm modüller sınırsız kullanımınıza açık.
@@ -112,12 +108,6 @@ export function PricingSection({ onOpenDemo }: PricingSectionProps) {
 
         {/* Single Comprehensive Plan Card */}
         <div className="max-w-4xl mx-auto rounded-3xl bg-gradient-to-b from-[#0f1d33] via-[#0b1422] to-[#070b12] border-2 border-[#2357c5]/80 p-8 sm:p-12 shadow-[0_0_60px_rgba(35,87,197,0.25)] relative">
-          {/* Top highlight badge */}
-          <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#2357c5] to-[#1d4bb0] border border-[#8fb4ff]/40 text-white text-[11px] font-mono font-black tracking-wider uppercase shadow-lg flex items-center gap-1.5">
-            <Zap size={12} className="text-amber-400 fill-amber-400" />
-            <span>TAM KAPSAMLI OTO SERVİS İŞLETİM SİSTEMİ</span>
-          </div>
-
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pb-10 border-b border-[#1f2d3d]">
             <div>
               <span className="text-xs font-mono font-bold text-[#8fb4ff] uppercase tracking-wider">
@@ -174,12 +164,12 @@ export function PricingSection({ onOpenDemo }: PricingSectionProps) {
             <div className="flex flex-wrap items-center gap-4 text-xs text-[#9caac0]">
               <span className="inline-flex items-center gap-1.5 text-[#edf3fa]">
                 <ShieldCheck size={16} className="text-[#8fb4ff]" />
-                14 Gün Ücretsiz Deneme
+                Hızlı Aktivasyon
               </span>
               <span>•</span>
-              <span>Kredi Kartı Gerekmez</span>
+              <span>Ücretsiz Veri Taşıma</span>
               <span>•</span>
-              <span>5 Dk Kurulum</span>
+              <span>Taahhütsüz İptal</span>
             </div>
 
             <a
@@ -187,7 +177,7 @@ export function PricingSection({ onOpenDemo }: PricingSectionProps) {
               onClick={onOpenDemo}
               className="w-full sm:w-auto px-8 py-4 rounded-xl text-xs sm:text-sm font-bold font-heading bg-gradient-to-r from-[#2357c5] to-[#1a439c] text-white shadow-[0_0_25px_rgba(35,87,197,0.45)] hover:shadow-[0_0_35px_rgba(35,87,197,0.7)] border border-[#8fb4ff]/30 inline-flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer"
             >
-              <span>14 Gün Ücretsiz Başlayın</span>
+              <span>Servis Paketini Başlatın</span>
               <ArrowRight size={16} />
             </a>
           </div>

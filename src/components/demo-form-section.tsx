@@ -42,18 +42,13 @@ export function DemoFormSection() {
         <div className="rounded-3xl bg-gradient-to-br from-[#0e1929] via-[#0b1422] to-[#070b12] border border-[#2357c5]/40 p-8 sm:p-12 lg:p-16 shadow-[0_0_80px_rgba(35,87,197,0.25)] grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Text (6 cols) */}
           <div className="lg:col-span-6 space-y-6">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
-              <Sparkles size={13} />
-              <span>14 GÜN ÜCRETSİZ ERİŞİM</span>
-            </span>
-
             <h2 className="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight leading-tight">
               Servisinizi Dijital Çağa Taşımaya{" "}
               <span className="text-[#8fb4ff]">Bugün Başlayın.</span>
             </h2>
 
             <p className="text-base text-[#9caac0] leading-relaxed">
-              Formu doldurun; uzman ekibimiz servisinizin ihtiyaçlarına özel canlı demo oturumunu 10 dakika içinde hazırlasın. Kredi kartı gerekmez.
+              Formu doldurun; uzman ekibimiz servisinizin ihtiyaçlarına özel canlı demo oturumunu 10 dakika içinde hazırlasın.
             </p>
 
             <div className="space-y-3 pt-2">
@@ -196,7 +191,7 @@ export function DemoFormSection() {
                     </>
                   ) : (
                     <>
-                      <span>14 Gün Ücretsiz Denemeyi Başlat</span>
+                      <span>Canlı Demo ve Bilgi Talep Edin</span>
                       <ArrowRight size={15} />
                     </>
                   )}

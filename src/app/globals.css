@@ -73,3 +73,24 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #2a384b;
 }
+
+/* Marquee infinite scroll */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+

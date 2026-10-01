@@ -29,8 +29,8 @@ export function FaqSection() {
       a: "Verileriniz kurumsal PostgreSQL mimarisi ve banka seviyesinde şifreleme ile korunur. Her gece otomatik artımlı yedekleme yapılır. Dükkanınızdaki bilgisayar arızalansa bile telefonunuzdan veya başka bir cihazdan giriş yapıp kaldığınız yerden çalışmaya devam edebilirsiniz.",
     },
     {
-      q: "14 günlük deneme sürümünde kısıtlama var mı?",
-      a: "Hayır. 14 gün boyunca kredi kartı vermeden sistemin tüm Profesyonel modüllerini (İş emirleri, Müşteri takip portalı, Kazanç radarı, GİB e-fatura, 360° dijital ikiz) atölyenizde sınırsızca deneyebilirsiniz.",
+      q: "Sisteme başlamadan önce nasıl canlı inceleyebilir veya demo alabilirim?",
+      a: "Uzman ekibimizle dilediğiniz gün ve saatte servisinizin büyüklüğüne ve ihtiyaçlarına özel 15 dakikalık canlı ekran paylaşımı oturumu gerçekleştiriyoruz. Eski müşteri/stok verilerinizi sisteme nasıl aktaracağınızı ve atölyenizde nasıl iş akışı kuracağınızı adım adım gösteriyoruz.",
     },
   ];
 
@@ -38,11 +38,7 @@ export function FaqSection() {
     <section id="sss" className="py-24 relative overflow-hidden bg-[#070b12] border-t border-[#1f2d3d]/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8fb4ff] bg-[#2357c5]/10 border border-[#3b72ea]/20 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
-            <HelpCircle size={13} />
-            <span>SIKÇA SORULAN SORULAR</span>
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight mt-4">
+          <h2 className="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight">
             Aklınıza Takılan{" "}
             <span className="text-[#8fb4ff]">Tüm Soruların Cevapları</span>
           </h2>

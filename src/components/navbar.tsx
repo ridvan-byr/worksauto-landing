@@ -61,24 +61,7 @@ export function Navbar({ onOpenDemo }: NavbarProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Official Brand Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-9 w-[170px] flex items-center transition-all duration-300 group-hover:opacity-90">
-              <Image
-                src="/brand/worksauto-logo-white.png"
-                alt="WorksAuto Oto Servis Yönetim Sistemi"
-                width={170}
-                height={36}
-                priority
-                className="h-8 w-auto object-contain object-left"
-              />
-            </div>
-            <span className="hidden sm:inline-flex text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#2357c5]/20 border border-[#3b72ea]/30 text-[#8fb4ff] font-semibold tracking-wide">
-              B2B SAAS
-            </span>
-          </Link>
-
-          {/* Desktop Navigation */}
+          {/* Left / Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
             {/* Features Dropdown */}
             <div
@@ -177,7 +160,7 @@ export function Navbar({ onOpenDemo }: NavbarProps) {
               onClick={onOpenDemo}
               className="relative group inline-flex items-center gap-2 px-4.5 py-2 rounded-xl bg-gradient-to-r from-[#2357c5] to-[#1a439c] text-white text-xs font-bold font-heading shadow-[0_0_20px_rgba(35,87,197,0.35)] hover:shadow-[0_0_30px_rgba(35,87,197,0.6)] hover:from-[#2963dc] hover:to-[#1e4eb4] transition-all cursor-pointer border border-[#8fb4ff]/25"
             >
-              <span>14 Gün Ücretsiz Dene</span>
+              <span>Demo Talep Edin</span>
               <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
           </div>
@@ -259,7 +242,7 @@ export function Navbar({ onOpenDemo }: NavbarProps) {
               }}
               className="w-full text-center py-3 text-xs font-bold text-white bg-[#2357c5] hover:bg-[#1d4bb0] rounded-xl shadow-[0_0_20px_rgba(35,87,197,0.4)]"
             >
-              14 Gün Ücretsiz Deneyin
+              Demo Talep Edin
             </a>
           </div>
         </div>
