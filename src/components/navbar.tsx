@@ -61,7 +61,21 @@ export function Navbar({ onOpenDemo }: NavbarProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Left / Navigation */}
+          {/* Brand Logo */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative h-8 w-[160px] flex items-center">
+              <Image
+                src="/brand/worksauto-logo-white.png"
+                alt="WorksAuto"
+                width={160}
+                height={34}
+                priority
+                className="h-7 sm:h-8 w-auto object-contain object-left group-hover:opacity-90 transition-opacity"
+              />
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
             {/* Features Dropdown */}
             <div
