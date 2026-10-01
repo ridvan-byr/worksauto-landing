@@ -61,24 +61,21 @@ export function Navbar({ onOpenDemo }: NavbarProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo */}
+          {/* Official Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2357c5] to-[#122b68] border border-[#3b72ea]/40 flex items-center justify-center shadow-[0_0_20px_rgba(35,87,197,0.35)] group-hover:shadow-[0_0_25px_rgba(35,87,197,0.55)] transition-all">
-              <span className="text-white font-black font-heading text-lg tracking-wider">W</span>
+            <div className="relative h-9 w-[170px] flex items-center transition-all duration-300 group-hover:opacity-90">
+              <Image
+                src="/brand/worksauto-logo-white.png"
+                alt="WorksAuto Oto Servis Yönetim Sistemi"
+                width={170}
+                height={36}
+                priority
+                className="h-8 w-auto object-contain object-left"
+              />
             </div>
-            <div className="flex flex-col">
-              <div className="flex items-center gap-1.5">
-                <span className="text-xl font-black font-heading tracking-tight text-white">
-                  Works<span className="text-[#8fb4ff]">Auto</span>
-                </span>
-                <span className="text-[10px] font-mono px-1.5 py-0.2 rounded-md bg-[#2357c5]/20 border border-[#3b72ea]/30 text-[#8fb4ff] font-semibold">
-                  SaaS
-                </span>
-              </div>
-              <span className="text-[10px] text-[#9caac0] tracking-wider uppercase font-medium">
-                Oto Servis Yönetimi
-              </span>
-            </div>
+            <span className="hidden sm:inline-flex text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#2357c5]/20 border border-[#3b72ea]/30 text-[#8fb4ff] font-semibold tracking-wide">
+              B2B SAAS
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

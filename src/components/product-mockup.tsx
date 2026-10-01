@@ -1,28 +1,83 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import {
-  TrendingUp,
   Wrench,
-  CheckCircle2,
-  Clock,
-  Car,
-  Bell,
-  Search,
-  ChevronRight,
-  ShieldCheck,
-  Send,
+  BarChart3,
+  Smartphone,
+  Layers,
   Sparkles,
+  CheckCircle2,
+  Maximize2,
+  ExternalLink,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function ProductMockup() {
-  const [activeTab, setActiveTab] = React.useState<"LIFTS" | "ORDERS" | "REVENUE">("LIFTS");
+  const [activeTab, setActiveTab] = React.useState<"TWIN" | "ORDERS" | "TRACKING" | "FINANCE">("TWIN");
+
+  const views = {
+    TWIN: {
+      title: "Atölye Dijital İkiz & Lift Simülasyonu",
+      subtitle: "Kuşbakışı lift dolulukları, araç konumları ve canlı işlem süreleri",
+      image: "/screenshots/digital-twin.png",
+      alt: "WorksAuto 360 Dijital İkiz Atölye Yönetimi",
+      aspect: "aspect-[16/10]",
+      badge: "CANLI ATÖLYE SİMÜLATÖRÜ",
+      metrics: [
+        { label: "Aktif Lift", val: "6 / 6 Dolu" },
+        { label: "Sıradaki Araç", val: "7 Beklemede" },
+        { label: "İşlem Hızı", val: "%94 Zamanında" },
+      ],
+    },
+    ORDERS: {
+      title: "İş Emirleri & Araç Kabul Masası",
+      subtitle: "Danışmandan ustaya anlık parça, işçilik ve maliyet akışı",
+      image: "/screenshots/work-orders.png",
+      alt: "WorksAuto İş Emirleri Yönetim Ekranı",
+      aspect: "aspect-[16/10]",
+      badge: "MERKEZİ İŞ EMRİ YÖNETİMİ",
+      metrics: [
+        { label: "Bugünkü Kabul", val: "18 Araç" },
+        { label: "Hazır / Teslim", val: "12 Araç" },
+        { label: "Ort. Servis Süresi", val: "2.4 Saat" },
+      ],
+    },
+    TRACKING: {
+      title: "Müşteri Canlı Takip Portalı",
+      subtitle: "Araç sahibine SMS/WhatsApp ile giden canlı aşama & onay linki",
+      image: "/screenshots/mobile-tracking.png",
+      alt: "WorksAuto Müşteri Canlı Araç Takip Ekranı",
+      aspect: "aspect-[16/10]",
+      badge: "MÜŞTERİ MEMNUNİYETİ",
+      metrics: [
+        { label: "Telefon Aramaları", val: "-%70 Azaldı" },
+        { label: "Ek İş Onay Hızı", val: "8 Dakika" },
+        { label: "Müşteri Puanı", val: "4.9 / 5.0" },
+      ],
+    },
+    FINANCE: {
+      title: "Kasa, Ciro & Net Kâr Raporları",
+      subtitle: "Nakit, POS, çek ve resmi GİB e-fatura hareketleri tek ekranda",
+      image: "/screenshots/financial-reports.png",
+      alt: "WorksAuto Finansal Kasa ve Raporlar",
+      aspect: "aspect-[16/10]",
+      badge: "FİNANSAL DENETİM",
+      metrics: [
+        { label: "Aylık Ciro", val: "₺428.500" },
+        { label: "Net Marj", val: "%58.4" },
+        { label: "Kasa Mutabakatı", val: "%100 Uyumlu" },
+      ],
+    },
+  };
+
+  const current = views[activeTab];
 
   return (
-    <div className="relative mx-auto max-w-5xl rounded-3xl p-1 sm:p-2 bg-gradient-to-b from-[#2a384b]/60 via-[#1f2d3d]/30 to-transparent border border-[#2a384b]/80 shadow-[0_30px_100px_rgba(0,0,0,0.85),0_0_80px_rgba(35,87,197,0.15)] group transition-all duration-500">
+    <div className="relative mx-auto max-w-5xl rounded-3xl p-1.5 sm:p-2 bg-gradient-to-b from-[#2a384b]/70 via-[#1f2d3d]/40 to-transparent border border-[#2a384b]/80 shadow-[0_30px_100px_rgba(0,0,0,0.85),0_0_80px_rgba(35,87,197,0.2)] group transition-all duration-500">
       {/* Glow Behind the Mockup */}
-      <div className="absolute -inset-4 bg-gradient-to-r from-[#2357c5]/20 via-[#3b72ea]/15 to-[#8fb4ff]/10 rounded-[36px] blur-3xl opacity-50 group-hover:opacity-75 transition-opacity pointer-events-none -z-10" />
+      <div className="absolute -inset-4 bg-gradient-to-r from-[#2357c5]/25 via-[#3b72ea]/20 to-[#8fb4ff]/10 rounded-[36px] blur-3xl opacity-60 group-hover:opacity-85 transition-opacity pointer-events-none -z-10" />
 
       {/* App Window Frame */}
       <div className="relative rounded-2xl bg-[#090e17] border border-[#1f2d3d] overflow-hidden text-left shadow-2xl">
@@ -33,212 +88,124 @@ export function ProductMockup() {
             <span className="w-3 h-3 rounded-full bg-[#ffbd2e] border border-[#dea123]/50 inline-block" />
             <span className="w-3 h-3 rounded-full bg-[#27c93f] border border-[#1aab29]/50 inline-block" />
             <span className="ml-3 text-[11px] font-mono text-[#9caac0] hidden sm:inline-block">
-              worksauto.com.tr / panel / canli-atolye
+              app.worksauto.com.tr / panel
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-mono font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Canlı Atölye: 5 Lift Dolu</span>
-            </div>
-            <div className="w-6 h-6 rounded-lg bg-[#162232] flex items-center justify-center text-[#9caac0]">
-              <Bell size={12} />
+              <span>Gerçek Servis Arayüzü v2.4</span>
             </div>
           </div>
         </div>
 
-        {/* Mockup Subheader / Nav */}
+        {/* View Switcher Tabs Bar */}
         <div className="px-4 sm:px-6 py-3 bg-[#0a101a] border-b border-[#1f2d3d] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-2 flex-wrap">
             <button
               type="button"
-              onClick={() => setActiveTab("LIFTS")}
+              onClick={() => setActiveTab("TWIN")}
               className={cn(
-                "px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer",
-                activeTab === "LIFTS"
+                "px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5",
+                activeTab === "TWIN"
                   ? "bg-[#2357c5] text-white shadow-[0_0_15px_rgba(35,87,197,0.4)]"
                   : "bg-[#111a26] text-[#9caac0] hover:text-white"
               )}
             >
-              Lift Takip (6/6)
+              <Layers size={13} />
+              <span>Atölye Dijital İkiz</span>
             </button>
             <button
               type="button"
               onClick={() => setActiveTab("ORDERS")}
               className={cn(
-                "px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer",
+                "px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5",
                 activeTab === "ORDERS"
                   ? "bg-[#2357c5] text-white shadow-[0_0_15px_rgba(35,87,197,0.4)]"
                   : "bg-[#111a26] text-[#9caac0] hover:text-white"
               )}
             >
-              Aktif İş Emirleri (18)
+              <Wrench size={13} />
+              <span>İş Emirleri Masası</span>
             </button>
             <button
               type="button"
-              onClick={() => setActiveTab("REVENUE")}
+              onClick={() => setActiveTab("TRACKING")}
               className={cn(
-                "px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer",
-                activeTab === "REVENUE"
+                "px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5",
+                activeTab === "TRACKING"
                   ? "bg-[#2357c5] text-white shadow-[0_0_15px_rgba(35,87,197,0.4)]"
                   : "bg-[#111a26] text-[#9caac0] hover:text-white"
               )}
             >
-              Kasa & Ciro Özeti
+              <Smartphone size={13} />
+              <span>Müşteri Takip Ekranı</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveTab("FINANCE")}
+              className={cn(
+                "px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5",
+                activeTab === "FINANCE"
+                  ? "bg-[#2357c5] text-white shadow-[0_0_15px_rgba(35,87,197,0.4)]"
+                  : "bg-[#111a26] text-[#9caac0] hover:text-white"
+              )}
+            >
+              <BarChart3 size={13} />
+              <span>Kasa & Raporlar</span>
             </button>
           </div>
 
           <div className="flex items-center gap-2 text-xs text-[#9caac0] font-mono">
-            <span>📅 Ekim 2026</span>
-            <span>•</span>
-            <span className="text-white font-semibold">Bayar Maslak Servis</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-400" />
+            <span className="text-white font-semibold">Canlı Veri Modu</span>
           </div>
         </div>
 
-        {/* 4 Mini Executive KPI Cards */}
-        <div className="p-4 sm:p-6 grid grid-cols-2 lg:grid-cols-4 gap-3 bg-[#070b12]">
-          <div className="p-3.5 rounded-2xl bg-[#111a26] border border-[#1f2d3d] hover:border-[#2a384b] transition-all">
-            <div className="flex items-center justify-between text-[11px] text-[#9caac0]">
-              <span className="font-semibold uppercase tracking-wider text-[10px]">Aylık Brüt Ciro</span>
-              <span className="text-emerald-400 font-mono font-bold">+%34 ↑</span>
-            </div>
-            <div className="mt-1 text-xl sm:text-2xl font-black font-heading tracking-tight text-white font-mono">
-              ₺384,500
-            </div>
-            <div className="text-[10px] text-[#9caac0] mt-1">İşçilik: ₺160K • Parça: ₺224K</div>
-          </div>
-
-          <div className="p-3.5 rounded-2xl bg-[#111a26] border border-[#1f2d3d] hover:border-[#2a384b] transition-all">
-            <div className="flex items-center justify-between text-[11px] text-[#9caac0]">
-              <span className="font-semibold uppercase tracking-wider text-[10px]">Gerçek Net Kâr</span>
-              <span className="px-1.5 py-0.5 rounded-md bg-emerald-500/10 text-emerald-400 font-mono text-[9px] font-bold border border-emerald-500/20">
-                %59 Marj
-              </span>
-            </div>
-            <div className="mt-1 text-xl sm:text-2xl font-black font-heading tracking-tight text-white font-mono">
-              ₺226,850
-            </div>
-            <div className="text-[10px] text-[#9caac0] mt-1">Giderler (OPEX) düşüldükten sonra</div>
-          </div>
-
-          <div className="p-3.5 rounded-2xl bg-[#111a26] border border-[#1f2d3d] hover:border-[#2a384b] transition-all">
-            <div className="flex items-center justify-between text-[11px] text-[#9caac0]">
-              <span className="font-semibold uppercase tracking-wider text-[10px]">Bugünkü Kasa</span>
-              <span className="w-2 h-2 rounded-full bg-emerald-400" />
-            </div>
-            <div className="mt-1 text-xl sm:text-2xl font-black font-heading tracking-tight text-white font-mono">
-              ₺48,200
-            </div>
-            <div className="text-[10px] text-[#9caac0] mt-1">Nakit, POS ve Havale tahsilat</div>
-          </div>
-
-          <div className="p-3.5 rounded-2xl bg-[#111a26] border border-[#1f2d3d] hover:border-[#2a384b] transition-all">
-            <div className="flex items-center justify-between text-[11px] text-[#9caac0]">
-              <span className="font-semibold uppercase tracking-wider text-[10px]">Atölyede İşlemde</span>
-              <span className="text-[#8fb4ff] font-mono text-[10px]">6 Lift</span>
-            </div>
-            <div className="mt-1 text-xl sm:text-2xl font-black font-heading tracking-tight text-white font-mono">
-              12 Araç
-            </div>
-            <div className="text-[10px] text-emerald-400 mt-1 font-medium">5 Liftte • 7 Sırada</div>
-          </div>
-        </div>
-
-        {/* Live Workshop Lifts View (Interactive Visuals) */}
-        <div className="p-4 sm:p-6 bg-[#070b12] border-t border-[#1f2d3d] space-y-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Wrench size={16} className="text-[#8fb4ff]" />
-              <span className="text-xs font-bold uppercase tracking-wider text-white font-heading">
-                Canlı Lift & İstasyon Durumu
-              </span>
-            </div>
-            <span className="text-[11px] text-[#9caac0] font-mono">Otomatik Canlı Senkronize</span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {/* Lift 1 */}
-            <div className="p-3.5 rounded-2xl bg-[#111a26] border border-[#1f2d3d] relative overflow-hidden group/lift hover:border-[#3b72ea]/50 transition-all">
-              <div className="flex items-center justify-between text-xs mb-2">
-                <span className="font-mono font-bold text-[#8fb4ff]">LİFT 01 (Mekanik)</span>
-                <span className="px-2 py-0.5 rounded-md bg-amber-500/10 border border-amber-500/20 text-amber-400 text-[10px] font-bold">
-                  İşlemde (%75)
-                </span>
-              </div>
-              <div className="flex items-center gap-2 my-1.5">
-                <span className="font-mono font-black text-white text-sm bg-black/40 px-2 py-0.5 rounded border border-white/10">
-                  34 BVR 198
-                </span>
-                <span className="text-xs font-semibold text-[#edf3fa] truncate">BMW 320i M Sport</span>
-              </div>
-              <p className="text-[11px] text-[#9caac0] mt-1">Ön-Arka Fren Balata & Disk Değişimi</p>
-              <div className="mt-3 pt-2.5 border-t border-[#1f2d3d] flex items-center justify-between text-[10px] text-[#9caac0]">
-                <span>Usta: Serkan U.</span>
-                <span className="font-mono text-emerald-400 font-bold">₺18,500</span>
-              </div>
+        {/* Real Interface Screenshot Display */}
+        <div className="relative bg-[#05080e] p-2 sm:p-4 overflow-hidden">
+          <div className="relative w-full rounded-xl overflow-hidden border border-[#1f2d3d]/80 bg-[#070b12] shadow-inner group/img">
+            {/* Live badge overlay */}
+            <div className="absolute top-3 left-3 z-10 flex items-center gap-2 px-3 py-1 rounded-full bg-[#070b12]/90 backdrop-blur-md border border-[#3b72ea]/40 text-[#8fb4ff] text-[10px] font-mono font-bold shadow-lg">
+              <Sparkles size={11} className="text-amber-400" />
+              <span>{current.badge}</span>
             </div>
 
-            {/* Lift 2 */}
-            <div className="p-3.5 rounded-2xl bg-[#111a26] border border-[#1f2d3d] relative overflow-hidden group/lift hover:border-[#3b72ea]/50 transition-all">
-              <div className="flex items-center justify-between text-xs mb-2">
-                <span className="font-mono font-bold text-[#8fb4ff]">LİFT 02 (Periyodik)</span>
-                <span className="px-2 py-0.5 rounded-md bg-sky-500/10 border border-sky-500/20 text-sky-400 text-[10px] font-bold">
-                  Parça Montaj
-                </span>
-              </div>
-              <div className="flex items-center gap-2 my-1.5">
-                <span className="font-mono font-black text-white text-sm bg-black/40 px-2 py-0.5 rounded border border-white/10">
-                  06 ANK 420
-                </span>
-                <span className="text-xs font-semibold text-[#edf3fa] truncate">Mercedes C200d</span>
-              </div>
-              <p className="text-[11px] text-[#9caac0] mt-1">60.000 KM Ağır Bakım & Yağ Değişimi</p>
-              <div className="mt-3 pt-2.5 border-t border-[#1f2d3d] flex items-center justify-between text-[10px] text-[#9caac0]">
-                <span>Usta: Ahmet K.</span>
-                <span className="font-mono text-emerald-400 font-bold">₺24,200</span>
-              </div>
+            <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-[#070b12]">
+              <Image
+                src={current.image}
+                alt={current.alt}
+                fill
+                priority
+                className="object-cover object-top transition-transform duration-700 ease-out group-hover/img:scale-[1.01]"
+              />
             </div>
 
-            {/* Lift 3 */}
-            <div className="p-3.5 rounded-2xl bg-[#111a26] border border-[#1f2d3d] relative overflow-hidden group/lift hover:border-[#3b72ea]/50 transition-all">
-              <div className="flex items-center justify-between text-xs mb-2">
-                <span className="font-mono font-bold text-[#8fb4ff]">LİFT 03 (Elektronik)</span>
-                <span className="px-2 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold">
-                  Test Sürüşü ✓
-                </span>
+            {/* Bottom Floating Info Pill Bar */}
+            <div className="p-3 sm:p-4 bg-[#0c1421]/95 border-t border-[#1f2d3d] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div>
+                <h4 className="text-xs sm:text-sm font-bold text-white font-heading">
+                  {current.title}
+                </h4>
+                <p className="text-[11px] text-[#9caac0] mt-0.5">
+                  {current.subtitle}
+                </p>
               </div>
-              <div className="flex items-center gap-2 my-1.5">
-                <span className="font-mono font-black text-white text-sm bg-black/40 px-2 py-0.5 rounded border border-white/10">
-                  35 IZM 99
-                </span>
-                <span className="text-xs font-semibold text-[#edf3fa] truncate">Audi A4 2.0 TDI</span>
-              </div>
-              <p className="text-[11px] text-[#9caac0] mt-1">DSG Şanzıman Kavrama Revizyonu</p>
-              <div className="mt-3 pt-2.5 border-t border-[#1f2d3d] flex items-center justify-between text-[10px] text-[#9caac0]">
-                <span>Usta: Murat U.</span>
-                <span className="font-mono text-emerald-400 font-bold">₺52,000</span>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        {/* AI & Growth Radar Banner Inside Mockup */}
-        <div className="p-3.5 sm:px-6 sm:py-3 bg-gradient-to-r from-[#12223a] via-[#101b2c] to-[#0c1421] border-t border-[#1f2d3d] flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
-          <div className="flex items-center gap-2.5">
-            <div className="p-1.5 rounded-lg bg-[#2357c5] text-white shrink-0 shadow-[0_0_10px_rgba(35,87,197,0.5)]">
-              <Sparkles size={14} />
+              <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+                {current.metrics.map((m, idx) => (
+                  <div key={idx} className="flex flex-col">
+                    <span className="text-[9px] uppercase tracking-wider text-[#9caac0] font-mono font-semibold">
+                      {m.label}
+                    </span>
+                    <span className="text-xs sm:text-sm font-bold text-white font-mono">
+                      {m.val}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div>
-              <span className="font-bold text-white">WorksAuto Kazanç Radarı: </span>
-              <span className="text-[#9caac0]">
-                Bugün TÜVTÜRK muayenesi yaklaşan 3 müşteriye tek tık WhatsApp randevu daveti gönderildi.
-              </span>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2 shrink-0">
-            <span className="text-emerald-400 font-mono font-bold">+₺13,500 Potansiyel Ciro</span>
           </div>
         </div>
       </div>

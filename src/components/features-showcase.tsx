@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import {
   Wrench,
   Smartphone,
@@ -25,7 +26,10 @@ interface FeatureTab {
   desc: string;
   icon: React.ElementType;
   highlights: string[];
-  mockupContent: React.ReactNode;
+  image: string;
+  imageAlt: string;
+  imageAspect?: string;
+  isMobilePhone?: boolean;
 }
 
 export function FeaturesShowcase() {
@@ -45,34 +49,8 @@ export function FeaturesShowcase() {
         "QR kodlu araç teslim ve kabul formu",
         "Fason (dış servis) ve yedek parça maliyet dökümü",
       ],
-      mockupContent: (
-        <div className="p-4 sm:p-6 bg-[#090e17] rounded-2xl border border-[#1f2d3d] space-y-3 font-mono text-xs">
-          <div className="flex items-center justify-between pb-3 border-b border-[#1f2d3d]">
-            <span className="text-white font-bold">İş Emri #WO-2026-0842</span>
-            <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px]">
-              LİFTTE • İŞLEMDE
-            </span>
-          </div>
-          <div className="flex items-center justify-between text-[#9caac0]">
-            <span>Araç: 34 BVR 198 (BMW 320i)</span>
-            <span>Müşteri: Sinan Kaya</span>
-          </div>
-          <div className="space-y-1.5 pt-2">
-            <div className="p-2.5 rounded-xl bg-[#111a26] border border-[#1f2d3d] flex justify-between">
-              <span>Ön Fren Disk & Balata Takımı</span>
-              <span className="text-white font-bold">₺9,500</span>
-            </div>
-            <div className="p-2.5 rounded-xl bg-[#111a26] border border-[#1f2d3d] flex justify-between">
-              <span>Fren Değişim & Hava Alma İşçiliği</span>
-              <span className="text-[#8fb4ff] font-bold">₺2,500</span>
-            </div>
-          </div>
-          <div className="pt-2 border-t border-[#1f2d3d] flex justify-between font-bold text-sm">
-            <span className="text-[#9caac0]">Genel Toplam:</span>
-            <span className="text-emerald-400">₺12,000</span>
-          </div>
-        </div>
-      ),
+      image: "/screenshots/work-orders.png",
+      imageAlt: "WorksAuto İş Emirleri & Araç Kabul",
     },
     {
       id: "CUSTOMER_PORTAL",
@@ -87,177 +65,73 @@ export function FeaturesShowcase() {
         "Ek parça ve masraflar için müşteriden anında dijital onay alma",
         "PayTR entegrasyonuyla link üzerinden güvenli kredi kartı ödemesi",
       ],
-      mockupContent: (
-        <div className="p-4 sm:p-6 bg-[#090e17] rounded-2xl border border-[#1f2d3d] space-y-4 text-xs">
-          <div className="text-center pb-3 border-b border-[#1f2d3d]">
-            <span className="text-[10px] font-mono text-[#8fb4ff] uppercase">Müşteri Mobil Ekranı</span>
-            <h4 className="text-sm font-bold text-white font-heading mt-0.5">Bayar Maslak Oto Servis</h4>
-          </div>
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
-              <CheckCircle2 size={14} />
-              <span className="font-semibold">Araç Kabul & Çizik Ekspertizi Tamamlandı</span>
-            </div>
-            <div className="flex items-center gap-2 p-2 rounded-xl bg-[#2357c5]/20 border border-[#3b72ea]/30 text-white">
-              <span className="w-2 h-2 rounded-full bg-[#8fb4ff] animate-ping" />
-              <span className="font-semibold">Lift 02'de Mekanik Onarım Sürüyor</span>
-            </div>
-            <div className="flex items-center gap-2 p-2 rounded-xl bg-[#111a26] text-[#9caac0]">
-              <span className="w-2 h-2 rounded-full bg-slate-600" />
-              <span>Yol Testi & Son Kontrol</span>
-            </div>
-          </div>
-          <div className="p-3 rounded-xl bg-[#162232] border border-[#2a384b] text-center">
-            <span className="text-[11px] text-[#edf3fa]">Tahmini Teslimat: <strong>Bugün 17:30</strong></span>
-          </div>
-        </div>
-      ),
+      image: "/screenshots/mobile-tracking.png",
+      imageAlt: "WorksAuto Müşteri Mobil Canlı Takip",
+      isMobilePhone: true,
     },
     {
       id: "GROWTH_RADAR",
-      badge: "GELİR ARTIRMA (CRM)",
-      title: "Kazanç Fırsat Radarı & Bakiye Hatırlatıcı",
-      headline: "Hiçbir alacağınız ve periyodik bakım müşteriniz kaybolmasın.",
-      desc: "TÜVTÜRK muayenesi yaklaşan araçları, vadesi geçmiş veresiye borçları ve 6 aydır servise uğramayan eski müşterileri yapay zekâ destekli radarla anında yakalayın. Tek tıkla kurumsal WhatsApp mesajı gönderin.",
+      badge: "YAPAY ZEKA & GELİR",
+      title: "Kazanç Fırsat Radarı & CRM",
+      headline: "Atölyenizin kaçırdığı ciroyu yapay zeka ile otomatik toplayın.",
+      desc: "Vakti gelen periyodik bakımlar, yaklaşan TÜVTÜRK muayeneleri, tahsil edilmemiş veresiye bakiyeleri ve kış/yaz lastik oteli uyarıları tek ekranda toplanır.",
       icon: Sparkles,
       highlights: [
-        "Vadesi geçen açık hesaplara tek tık WhatsApp bakiye hatırlatma",
-        "45 gün kala TÜVTÜRK ön muayene kontrol randevusu daveti",
-        "Onay bekleyen tekliflere parmak imzası onay linki gönderme",
-        "6+ aydır servise gelmeyen kayıp müşterileri periyodik bakıma geri çağırma",
+        "Otomatik SMS/WhatsApp periyodik bakım hatırlatıcıları",
+        "TÜVTÜRK muayene bitiş tarihi erken uyarı sistemi",
+        "Tahsilatı geciken cari hesaplar için nazik ödeme bildirimleri",
+        "Mevsimsel lastik ve klima kampanya otomasyonu",
       ],
-      mockupContent: (
-        <div className="p-4 sm:p-6 bg-[#090e17] rounded-2xl border border-[#1f2d3d] space-y-3 font-mono text-xs">
-          <div className="flex items-center justify-between pb-2 border-b border-[#1f2d3d]">
-            <span className="text-amber-400 font-bold flex items-center gap-1.5">
-              <Sparkles size={14} /> Geciken Alacak Uyarısı
-            </span>
-            <span className="text-[#9caac0] text-[10px]">18 Gün Gecikmede</span>
-          </div>
-          <p className="text-white text-[11px] leading-relaxed">
-            Fatura #INV-2026-0312 • Bakiye: <strong className="text-rose-400">₺14,250</strong>
-          </p>
-          <div className="p-2.5 rounded-xl bg-[#111a26] border border-[#1f2d3d] text-[11px] text-[#9caac0] font-sans">
-            "Sayın Burak Bey, 34 EMR 45 plakalı aracınızın açık servis bakiyesini hatırlatmak isteriz..."
-          </div>
-          <button
-            type="button"
-            className="w-full py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold flex items-center justify-center gap-2 cursor-pointer shadow-[0_0_15px_rgba(16,185,129,0.3)] transition-all font-sans"
-          >
-            <Send size={13} />
-            <span>Tek Tıkla WhatsApp Hatırlatması Gönder</span>
-          </button>
-        </div>
-      ),
+      image: "/screenshots/app-dashboard.png",
+      imageAlt: "WorksAuto Kazanç Fırsat Radarı",
     },
     {
       id: "DIGITAL_TWIN",
-      badge: "GÜVEN & KORUMA",
-      title: "360° Dijital İkiz & Çizik Ekspertiz Şablonu",
-      headline: "'Bu çizik serviste mi oldu?' tartışmalarına kesin son.",
-      desc: "Araç kabul anında sedan, SUV veya hatchback gövde şablonu üzerinde mevcut çizik, göçük ve boya durumunu dokunmatik olarak işaretleyin. Fotoğraf çekip müşteriye imzalatın, servisinizin itibarını koruyun.",
+      badge: "KURUMSAL İMAJ",
+      title: "360° Atölye Dijital İkiz",
+      headline: "Kuşbakışı atölye simülasyonu ve hasar ekspertiz şablonu.",
+      desc: "Müşteri kabulünde aracın kaportasındaki mevcut çizik ve vurukları dokunmatik ekranda işaretleyin. Hem teslim fişine basılsın hem de müşterinin onayına sunulsun.",
       icon: Car,
       highlights: [
-        "Sedan, SUV, Hatchback ve Ticari gövde şablonları",
-        "Çizik, göçük, çatlak cam ve boyalı parça dokunmatik işaretleme",
-        "Depo yakıt seviyesi ve teslimat KM kaydı",
-        "Cep telefonu veya tabletten müşteri parmak imzası alma",
+        "Sedan, Hatchback, SUV ve Ticari araç 360° gövde şablonları",
+        "Fotoğraf ekleme ve hasar derecesi işaretleme (Çizik, Göçük, Boyalı)",
+        "Araç tesliminde ihtilafları ve tartışmaları sıfırlayan dijital tutanak",
+        "Lift kolonları ve istasyonlar üzerinde 2.5D kuşbakışı simülasyon",
       ],
-      mockupContent: (
-        <div className="p-4 sm:p-6 bg-[#090e17] rounded-2xl border border-[#1f2d3d] space-y-3 text-xs">
-          <div className="flex items-center justify-between pb-2 border-b border-[#1f2d3d]">
-            <span className="font-bold text-white">360° Kaporta Durum Şablonu</span>
-            <span className="text-[10px] font-mono text-emerald-400">İmzalandı ✓</span>
-          </div>
-          <div className="h-32 rounded-xl bg-[#111a26] border border-[#1f2d3d] flex items-center justify-center relative overflow-hidden">
-            <div className="text-center space-y-1">
-              <span className="text-3xl">🚗</span>
-              <div className="flex gap-2 justify-center">
-                <span className="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-400 text-[9px] font-mono">
-                  ● Sol Arka Çamurluk (Çizik)
-                </span>
-                <span className="px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-400 text-[9px] font-mono">
-                  ● Ön Tampon (Taş İzi)
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="flex justify-between text-[11px] text-[#9caac0]">
-            <span>Yakıt: 3/4 Depo</span>
-            <span>Giriş KM: 84,250 KM</span>
-          </div>
-        </div>
-      ),
+      image: "/screenshots/digital-twin.png",
+      imageAlt: "WorksAuto 360 Dijital İkiz ve Hasar Ekspertizi",
     },
     {
-      id: "FINANCE_INVOICE",
-      badge: "MUHASEBE & FİNANS",
-      title: "B2B Cari Hesap, Kasa & GİB E-Fatura",
-      headline: "Kasanızı, çeklerinizi ve resmi faturalarınızı tek ekrandan yönetin.",
-      desc: "Nakit, POS, banka havalesi ve çek tahsilatları otomatik Gün Sonu Z-Raporuna girer. Nilvera ve Paraşüt entegrasyonuyla GİB e-fatura / e-arşiv saniyeler içinde kesilip müşteriye iletilir.",
+      id: "FINANCE_EINVOICE",
+      badge: "FİNANS & RESMİ MEVZUAT",
+      title: "Ön Muhasebe & GİB E-Fatura",
+      headline: "Kasa, POS, çek ve resmi e-fatura tek tıkla entegre.",
+      desc: "Nilvera ve Paraşüt entegrasyonu sayesinde tamamlanan iş emirlerini tek tuşla GİB e-fatura veya e-arşive dönüştürün. Gün sonu kasa mutabakatı ve Z-raporuyla kuruş şaşmasın.",
       icon: Receipt,
       highlights: [
-        "Gelir İdaresi Başkanlığı (GİB) E-Fatura & E-Arşiv entegrasyonu",
-        "Gün sonu kasa mutabakatı ve yazdırılabilir Z-Raporu",
-        "Müşteri ve toptancı tedarikçi cari hesap kartları",
-        "Çek & Senet portföy takibi ve tahsilat kaydı",
+        "Tek tıkla GİB E-Fatura / E-Arşiv kesimi ve otomatik PDF gönderimi",
+        "Nakit, Kredi Kartı (POS), Havale ve Çek kırılımlı gün sonu Z-raporu",
+        "Müşteri ve toptancı cari hesap hareketleri, veresiye yaşlandırma",
+        "İşçilik ve yedek parça bazlı net kârlılık raporları",
       ],
-      mockupContent: (
-        <div className="p-4 sm:p-6 bg-[#090e17] rounded-2xl border border-[#1f2d3d] space-y-3 font-mono text-xs">
-          <div className="flex items-center justify-between pb-2 border-b border-[#1f2d3d]">
-            <span className="text-white font-bold">GÜN SONU Z-RAPORU</span>
-            <span className="text-emerald-400 text-[10px]">MUTABIK ✓</span>
-          </div>
-          <div className="space-y-1.5">
-            <div className="flex justify-between text-[#9caac0]">
-              <span>Nakit Kasa:</span>
-              <span className="text-white font-bold">₺18,400</span>
-            </div>
-            <div className="flex justify-between text-[#9caac0]">
-              <span>Kredi Kartı / POS:</span>
-              <span className="text-white font-bold">₺24,500</span>
-            </div>
-            <div className="flex justify-between text-[#9caac0]">
-              <span>Banka Havalesi:</span>
-              <span className="text-white font-bold">₺9,300</span>
-            </div>
-          </div>
-          <div className="pt-2 border-t-2 border-[#1f2d3d] flex justify-between font-bold text-sm">
-            <span className="text-white font-sans">NET KASA TOPLAMI:</span>
-            <span className="text-emerald-400">₺52,200</span>
-          </div>
-        </div>
-      ),
+      image: "/screenshots/financial-reports.png",
+      imageAlt: "WorksAuto Finans ve GİB E-Fatura Yönetimi",
     },
     {
       id: "INVENTORY",
-      badge: "STOK & TEDARİK",
-      title: "Yedek Parça, Raf Adresi & Kritik Stok",
-      headline: "Aradığınız parçayı saniyeler içinde rafta bulun, fireyi sıfırlayın.",
-      desc: "Her parçanın raf ve göz kodunu belirleyin, kritik stok altına düşen yağ ve filtreleri anında görün. Barkod okutarak iş emrine tek tıkla parça ekleyin.",
+      badge: "MALİYET KONTROLÜ",
+      title: "Yedek Parça & Raf Takibi",
+      headline: "Kayıp parçaları ve atıl stok maliyetini sıfırlayın.",
+      desc: "Hangi parçadan rafta kaç adet kaldı, kritik seviyenin altına düştü mü? Barkod okuyucu desteğiyle saniyeler içinde parça çıkışı yapın ve iş emrine doğrudan bağlayın.",
       icon: Package,
       highlights: [
-        "Raf, koridor ve göz adresi tanımlama",
-        "Kritik stok seviyesi otomatik uyarı motoru",
-        "Kamera veya el terminaliyle barkod/QR okuma",
-        "Toptancı parça alış maliyeti ve kâr marjı kontrolü",
+        "Kritik stok uyarıları ve otomatik sipariş listesi oluşturma",
+        "Raf, kutu ve koridor bazlı depo konumlandırma",
+        "OEM parça kodu ve muadil parça eşleştirme",
+        "Toptancı alış faturası aktarımı ve FIFO maliyet hesabı",
       ],
-      mockupContent: (
-        <div className="p-4 sm:p-6 bg-[#090e17] rounded-2xl border border-[#1f2d3d] space-y-3 font-mono text-xs">
-          <div className="flex items-center justify-between pb-2 border-b border-[#1f2d3d]">
-            <span className="text-white font-bold">STOK KARTI: 5W-30 Motor Yağı (4L)</span>
-            <span className="px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20 text-[10px]">
-              KRİTİK STOK
-            </span>
-          </div>
-          <div className="grid grid-cols-2 gap-2 text-[11px]">
-            <div className="p-2 rounded bg-[#111a26]">Raf Adresi: <strong>A-03 / Göz 2</strong></div>
-            <div className="p-2 rounded bg-[#111a26]">Mevcut Stok: <strong className="text-rose-400">2 Adet</strong></div>
-            <div className="p-2 rounded bg-[#111a26]">Alış Maliyeti: ₺850</div>
-            <div className="p-2 rounded bg-[#111a26]">Satış Fiyatı: ₺1,400</div>
-          </div>
-        </div>
-      ),
+      image: "/screenshots/app-dashboard.png",
+      imageAlt: "WorksAuto Yedek Parça ve Stok Takibi",
     },
   ];
 
@@ -267,6 +141,7 @@ export function FeaturesShowcase() {
   return (
     <section id="ozellikler" className="py-24 relative overflow-hidden bg-[#070b12] border-t border-[#1f2d3d]/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8fb4ff] bg-[#2357c5]/10 border border-[#3b72ea]/20 px-3.5 py-1.5 rounded-full">
             GÜÇLÜ ÖZELLİKLER
@@ -307,7 +182,7 @@ export function FeaturesShowcase() {
         {/* Active Tab Detailed View Container */}
         <div className="mt-8 rounded-3xl bg-[#0c1421] border border-[#1f2d3d] p-6 sm:p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-2xl">
           {/* Left Info Column (7 cols) */}
-          <div className="lg:col-span-7 space-y-6 text-left">
+          <div className="lg:col-span-6 space-y-6 text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2357c5]/15 border border-[#3b72ea]/30 text-[#8fb4ff] text-xs font-mono font-bold">
               <Icon size={14} />
               <span>{currentTab.badge}</span>
@@ -336,17 +211,48 @@ export function FeaturesShowcase() {
                 href="#demo-talep"
                 className="inline-flex items-center gap-2 text-xs font-bold text-[#8fb4ff] hover:text-white transition-colors group cursor-pointer"
               >
-                <span>Bu modülü canlı denemek için demo talep edin</span>
+                <span>Bu modülü canlı denemek için ücretsiz başlayın</span>
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>
 
-          {/* Right Mockup Preview Column (5 cols) */}
-          <div className="lg:col-span-5">
-            <div className="relative rounded-2xl p-1 bg-gradient-to-b from-[#2a384b] to-transparent shadow-xl">
-              {currentTab.mockupContent}
-            </div>
+          {/* Right Mockup Preview Column (6 cols) */}
+          <div className="lg:col-span-6 flex justify-center">
+            {currentTab.isMobilePhone ? (
+              /* Mobile Phone Mockup Frame */
+              <div className="relative w-full max-w-[300px] rounded-[36px] p-3 bg-gradient-to-b from-[#2a384b] to-[#121c29] border border-[#3b72ea]/40 shadow-2xl">
+                <div className="relative rounded-[28px] overflow-hidden bg-black aspect-[9/18] border border-black">
+                  <Image
+                    src={currentTab.image}
+                    alt={currentTab.imageAlt}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="absolute top-5 left-1/2 -translate-x-1/2 w-20 h-4 bg-black rounded-full" />
+              </div>
+            ) : (
+              /* Desktop Window Mockup Frame */
+              <div className="relative w-full rounded-2xl overflow-hidden border border-[#1f2d3d] bg-[#070b12] shadow-2xl group/prev">
+                <div className="flex items-center justify-between px-3 py-2 bg-[#0d1520] border-b border-[#1f2d3d] text-[10px] font-mono text-[#9caac0]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+                  </div>
+                  <span>worksauto-preview</span>
+                </div>
+                <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#070b12]">
+                  <Image
+                    src={currentTab.image}
+                    alt={currentTab.imageAlt}
+                    fill
+                    className="object-cover object-top transition-transform duration-500 group-hover/prev:scale-[1.02]"
+                  />
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

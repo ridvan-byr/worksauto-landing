@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ShieldCheck, Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
@@ -11,13 +12,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#1f2d3d]/60">
           {/* Brand Info (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#2357c5] to-[#122b68] border border-[#3b72ea]/40 flex items-center justify-center">
-                <span className="text-white font-black font-heading text-base">W</span>
+            <Link href="/" className="inline-flex items-center">
+              <div className="relative h-8 w-[160px] flex items-center">
+                <Image
+                  src="/brand/worksauto-logo-white.png"
+                  alt="WorksAuto Oto Servis Yönetimi"
+                  width={160}
+                  height={34}
+                  className="h-7 w-auto object-contain object-left"
+                />
               </div>
-              <span className="text-xl font-black font-heading tracking-tight text-white">
-                Works<span className="text-[#8fb4ff]">Auto</span>
-              </span>
             </Link>
 
             <p className="text-xs text-[#9caac0] max-w-sm leading-relaxed">
