@@ -27,20 +27,6 @@ export function HeroSection({ onOpenDemo }: HeroSectionProps) {
           {/* LEFT COLUMN: BRAND, HEADLINE, SUBTITLE, CTAs, TRUST       */}
           {/* ======================================================== */}
           <div className="lg:col-span-5 text-left space-y-6">
-            {/* Official Brand Logo */}
-            <div className="flex items-center">
-              <div className="relative h-10 w-[200px] sm:w-[220px]">
-                <Image
-                  src="/brand/worksauto-logo-white.png"
-                  alt="WorksAuto Oto Servis Yönetim Sistemi"
-                  width={220}
-                  height={48}
-                  priority
-                  className="h-9 w-auto object-contain drop-shadow-md"
-                />
-              </div>
-            </div>
-
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-[44px] xl:text-[52px] font-black font-heading tracking-tight text-white leading-[1.12]">
               Oto Servis Yönetimini{" "}
