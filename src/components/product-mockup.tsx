@@ -86,10 +86,10 @@ export function ProductMockup() {
                 {/* Dashboard Layout: Mini Sidebar + Workspace (1:1 with worksauto-web) */}
                 <div className="flex h-[325px] sm:h-[355px] overflow-hidden text-left">
                   {/* Left Sidebar (Matching worksauto-web app-sidebar) */}
-                  <div className="w-11 sm:w-12 bg-[#080d15] border-r border-[#1a2332] p-2 flex flex-col items-center justify-between shrink-0">
-                    <div className="space-y-3 w-full flex flex-col items-center">
-                      {/* Official WorksAuto White Icon */}
-                      <div className="relative w-7 h-5 flex items-center justify-center my-0.5">
+                  <div className="w-11 sm:w-12 bg-[#080d15] border-r border-[#1a2332] py-2.5 px-1.5 flex flex-col items-center justify-between shrink-0">
+                    <div className="w-full flex flex-col items-center">
+                      {/* Official WorksAuto White Icon with dedicated separated container */}
+                      <div className="w-full flex items-center justify-center pt-0.5 pb-2.5 mb-3 border-b border-[#1a2332]">
                         <Image
                           src="/brand/worksauto-icon-white-tight.png"
                           alt="WorksAuto"
@@ -99,37 +99,40 @@ export function ProductMockup() {
                         />
                       </div>
 
-                      {/* Active: Genel Bakış */}
-                      <div className="w-7 h-7 rounded-lg bg-[#2357c5] text-white flex items-center justify-center shadow-sm">
-                        <LayoutDashboard size={13} />
-                      </div>
-                      {/* İş Emirleri */}
-                      <div className="relative w-7 h-7 rounded-lg text-[#738094] hover:text-white flex items-center justify-center">
-                        <Wrench size={13} />
-                        <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-[#2357c5] text-white font-mono font-bold text-[7px] flex items-center justify-center">
-                          4
-                        </span>
-                      </div>
-                      {/* Randevu Takvimi */}
-                      <div className="w-7 h-7 rounded-lg text-[#738094] hover:text-white flex items-center justify-center">
-                        <Calendar size={13} />
-                      </div>
-                      {/* Müşteriler & Araçlar */}
-                      <div className="w-7 h-7 rounded-lg text-[#738094] hover:text-white flex items-center justify-center">
-                        <Users size={13} />
-                      </div>
-                      {/* Yedek Parça & Stok */}
-                      <div className="w-7 h-7 rounded-lg text-[#738094] hover:text-white flex items-center justify-center">
-                        <Package size={13} />
-                      </div>
-                      {/* Faturalar */}
-                      <div className="w-7 h-7 rounded-lg text-[#738094] hover:text-white flex items-center justify-center">
-                        <Receipt size={13} />
+                      {/* Nav Items with comfortable spacing */}
+                      <div className="space-y-2.5 w-full flex flex-col items-center">
+                        {/* Active: Genel Bakış */}
+                        <div className="w-7 h-7 rounded-lg bg-[#2357c5] text-white flex items-center justify-center shadow-sm">
+                          <LayoutDashboard size={13} />
+                        </div>
+                        {/* İş Emirleri */}
+                        <div className="relative w-7 h-7 rounded-lg text-[#738094] hover:text-white flex items-center justify-center">
+                          <Wrench size={13} />
+                          <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-[#2357c5] text-white font-mono font-bold text-[7px] flex items-center justify-center">
+                            4
+                          </span>
+                        </div>
+                        {/* Randevu Takvimi */}
+                        <div className="w-7 h-7 rounded-lg text-[#738094] hover:text-white flex items-center justify-center">
+                          <Calendar size={13} />
+                        </div>
+                        {/* Müşteriler & Araçlar */}
+                        <div className="w-7 h-7 rounded-lg text-[#738094] hover:text-white flex items-center justify-center">
+                          <Users size={13} />
+                        </div>
+                        {/* Yedek Parça & Stok */}
+                        <div className="w-7 h-7 rounded-lg text-[#738094] hover:text-white flex items-center justify-center">
+                          <Package size={13} />
+                        </div>
+                        {/* Faturalar */}
+                        <div className="w-7 h-7 rounded-lg text-[#738094] hover:text-white flex items-center justify-center">
+                          <Receipt size={13} />
+                        </div>
                       </div>
                     </div>
 
                     {/* User Avatar */}
-                    <div className="w-6 h-6 rounded-full bg-[#182333] border border-white/10 flex items-center justify-center text-[9px] font-bold text-white">
+                    <div className="w-6 h-6 rounded-full bg-[#182333] border border-white/10 flex items-center justify-center text-[9px] font-bold text-white mb-0.5">
                       S
                     </div>
                   </div>
@@ -406,68 +409,106 @@ export function ProductMockup() {
                   </div>
                 </div>
 
-                {/* Active Work Order Card (worksauto-web Atölye ve Liftler) */}
-                <div className="p-2 rounded-xl bg-[#0c1421] border border-[#3b72ea]/40 space-y-1">
-                  <div className="flex items-center justify-between text-[9px]">
-                    <div className="flex items-center gap-1">
-                      <span className="font-mono text-[#8fb4ff] font-bold text-[8px]">LİFT 01</span>
-                      {/* TR Plate */}
-                      <div className="inline-flex items-center h-4 rounded-sm border border-slate-700 bg-white text-slate-950 font-mono font-bold text-[8px] overflow-hidden shrink-0">
-                        <span className="bg-[#003399] text-white px-0.5 text-[6px] font-sans font-bold flex items-center h-full">TR</span>
-                        <span className="px-1">34 BVR 198</span>
+                {/* Active Work Order Cards (worksauto-web Atölye ve Liftler) */}
+                <div className="space-y-1.5 pt-0.5">
+                  {/* LİFT 01 */}
+                  <div className="p-2 rounded-xl bg-[#0c1421] border border-[#3b72ea]/40 space-y-1">
+                    <div className="flex items-center justify-between text-[9px]">
+                      <div className="flex items-center gap-1">
+                        <span className="font-mono text-[#8fb4ff] font-bold text-[8px]">LİFT 01</span>
+                        {/* TR Plate */}
+                        <div className="inline-flex items-center h-4 rounded-sm border border-slate-700 bg-white text-slate-950 font-mono font-bold text-[8px] overflow-hidden shrink-0">
+                          <span className="bg-[#003399] text-white px-0.5 text-[6px] font-sans font-bold flex items-center h-full">TR</span>
+                          <span className="px-1">34 BVR 198</span>
+                        </div>
                       </div>
+                      <span className="px-1 py-0.5 rounded bg-amber-500/20 text-amber-400 font-bold text-[7.5px]">
+                        %75 İşlemde
+                      </span>
                     </div>
-                    <span className="px-1 py-0.5 rounded bg-amber-500/20 text-amber-400 font-bold text-[7.5px]">
-                      %75 İşlemde
-                    </span>
+                    <div className="text-[9.5px] font-bold text-white truncate">
+                      BMW 320i M Sport
+                    </div>
+                    <div className="flex items-center justify-between text-[8px] text-[#9caac0] pt-0.5 border-t border-[#1a2332]">
+                      <span>Serkan Usta</span>
+                      <span className="text-emerald-400 font-mono font-bold">₺18,500</span>
+                    </div>
                   </div>
-                  <div className="text-[9.5px] font-bold text-white truncate">
-                    BMW 320i M Sport
-                  </div>
-                  <div className="flex items-center justify-between text-[8px] text-[#9caac0] pt-0.5 border-t border-[#1a2332]">
-                    <span>Serkan U.</span>
-                    <span className="text-emerald-400 font-mono font-bold">₺18,500</span>
+
+                  {/* LİFT 02 */}
+                  <div className="p-2 rounded-xl bg-[#0c1421] border border-emerald-500/40 space-y-1">
+                    <div className="flex items-center justify-between text-[9px]">
+                      <div className="flex items-center gap-1">
+                        <span className="font-mono text-[#8fb4ff] font-bold text-[8px]">LİFT 02</span>
+                        {/* TR Plate */}
+                        <div className="inline-flex items-center h-4 rounded-sm border border-slate-700 bg-white text-slate-950 font-mono font-bold text-[8px] overflow-hidden shrink-0">
+                          <span className="bg-[#003399] text-white px-0.5 text-[6px] font-sans font-bold flex items-center h-full">TR</span>
+                          <span className="px-1">06 ANK 2026</span>
+                        </div>
+                      </div>
+                      <span className="px-1 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold text-[7.5px]">
+                        Hazır
+                      </span>
+                    </div>
+                    <div className="text-[9.5px] font-bold text-white truncate">
+                      Mercedes C200d AMG
+                    </div>
+                    <div className="flex items-center justify-between text-[8px] text-[#9caac0] pt-0.5 border-t border-[#1a2332]">
+                      <span>Ahmet Usta</span>
+                      <span className="text-emerald-400 font-mono font-bold">₺24,800</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Mobile Bottom Navigation (worksauto-web bottom-nav.tsx 1:1) */}
-              <div className="bg-[#080d15] border-t border-[#1a2332] px-2 py-1.5 flex items-center justify-around relative">
-                {/* Genel Bakış (Active) */}
-                <div className="flex flex-col items-center text-[#2357c5] dark:text-[#8fb4ff]">
-                  <LayoutDashboard size={14} />
-                  <span className="text-[7.5px] font-bold mt-0.5">Genel Bakış</span>
-                </div>
-
-                {/* İş Emirleri */}
-                <div className="flex flex-col items-center text-[#738094]">
-                  <Wrench size={14} />
-                  <span className="text-[7.5px] mt-0.5">İş Emirleri</span>
-                </div>
-
-                {/* Center Elevated + Hızlı Kabul Button */}
-                <div className="flex flex-col items-center -mt-4">
-                  <div className="w-8 h-8 rounded-xl bg-[#2357c5] text-white flex items-center justify-center shadow-lg shadow-[#2357c5]/40 border border-white/20">
-                    <Plus size={16} strokeWidth={2.5} />
+              {/* Mobile Bottom Navigation (Pinned to VERY bottom of phone) */}
+              <div className="w-full shrink-0 mt-auto bg-[#0a101a] border-t border-[#1a2332] pt-2 pb-1.5 px-1 relative">
+                {/* 5 Equal Columns Grid - guarantees the 3rd item is DEAD CENTER */}
+                <div className="grid grid-cols-5 items-end text-center relative">
+                  {/* 1. Genel Bakış (Active) */}
+                  <div className="flex flex-col items-center justify-center text-[#2357c5] dark:text-[#8fb4ff] cursor-pointer">
+                    <div className="p-1 rounded-lg bg-[#2357c5]/15">
+                      <LayoutDashboard size={14} />
+                    </div>
+                    <span className="text-[7.5px] font-bold mt-0.5 tracking-tight truncate">Genel Bakış</span>
                   </div>
-                  <span className="text-[7px] font-bold text-[#8fb4ff] mt-0.5">Kabul</span>
+
+                  {/* 2. İş Emirleri */}
+                  <div className="flex flex-col items-center justify-center text-[#738094] hover:text-white cursor-pointer">
+                    <div className="p-1">
+                      <Wrench size={14} />
+                    </div>
+                    <span className="text-[7.5px] mt-0.5 tracking-tight truncate">İş Emirleri</span>
+                  </div>
+
+                  {/* 3. Center Elevated + Hızlı Kabul Button (EXACT HORIZONTAL CENTER) */}
+                  <div className="flex flex-col items-center justify-center -mt-6 cursor-pointer">
+                    <div className="w-10 h-10 rounded-2xl bg-[#2357c5] hover:bg-[#1d4bb0] text-white flex items-center justify-center shadow-lg shadow-[#2357c5]/40 border-2 border-[#070b12] active:scale-95 transition-transform">
+                      <Plus size={18} strokeWidth={2.5} />
+                    </div>
+                    <span className="text-[7.5px] font-bold text-[#8fb4ff] mt-0.5 tracking-tight">Kabul</span>
+                  </div>
+
+                  {/* 4. Randevular */}
+                  <div className="flex flex-col items-center justify-center text-[#738094] hover:text-white cursor-pointer">
+                    <div className="p-1">
+                      <Calendar size={14} />
+                    </div>
+                    <span className="text-[7.5px] mt-0.5 tracking-tight truncate">Randevu</span>
+                  </div>
+
+                  {/* 5. Menü */}
+                  <div className="flex flex-col items-center justify-center text-[#738094] hover:text-white cursor-pointer">
+                    <div className="p-1">
+                      <Menu size={14} />
+                    </div>
+                    <span className="text-[7.5px] mt-0.5 tracking-tight truncate">Menü</span>
+                  </div>
                 </div>
 
-                {/* Randevular */}
-                <div className="flex flex-col items-center text-[#738094]">
-                  <Calendar size={14} />
-                  <span className="text-[7.5px] mt-0.5">Randevu</span>
-                </div>
-
-                {/* Menü */}
-                <div className="flex flex-col items-center text-[#738094]">
-                  <Menu size={14} />
-                  <span className="text-[7.5px] mt-0.5">Menü</span>
-                </div>
+                {/* Apple Home Bar Indicator */}
+                <div className="w-24 h-1 bg-white/35 rounded-full mx-auto mt-2 mb-0.5" />
               </div>
-
-              {/* Apple Home Bar */}
-              <div className="w-22 h-1 bg-white/30 rounded-full mx-auto my-1" />
             </div>
           </div>
         </div>
