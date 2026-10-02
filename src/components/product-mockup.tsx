@@ -38,7 +38,7 @@ export function ProductMockup() {
         {/* ======================================================== */}
         <div
           className="relative w-full max-w-[620px] sm:max-w-[680px] lg:max-w-[650px] xl:max-w-[700px] [transform-style:preserve-3d] transition-all duration-700 ease-out"
-          style={{ transform: "rotateY(10deg) rotateX(3deg)" }}
+          style={{ transform: "rotateY(8deg) rotateX(2.5deg)" }}
         >
           {/* Display Lid Frame (Space Gray Aluminum Chassis) */}
           <div className="rounded-t-[20px] sm:rounded-t-[24px] bg-[#05070c] p-2 sm:p-2.5 border-t border-x border-[#3a4658] shadow-[0_30px_70px_rgba(0,0,0,0.95)] relative">
@@ -51,12 +51,13 @@ export function ProductMockup() {
             <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
             {/* Screen Display Canvas (WorksAuto Web Genel Bakış 1:1) */}
-            <div className="rounded-lg sm:rounded-xl bg-[#090f18] border border-[#1a2332] overflow-hidden flex flex-col font-sans">
-              {/* 1. Desktop Top Header (Exact 1:1 with Real Panel Header) */}
-              <div className="relative px-3 py-1.5 bg-[#0b1019] border-b border-[#1a2332] flex items-center justify-between text-xs select-none">
-                {/* Left: WorksAuto Logo + Sidebar Collapse Button + BAYAR OTO SERVİS (No extra car logo) */}
-                <div className="flex items-center gap-2">
-                  {/* WorksAuto White Tight Brand Icon */}
+            <div className="rounded-lg sm:rounded-xl bg-[#090f18] border border-[#1a2332] overflow-hidden flex font-sans">
+              {/* ================================================================= */}
+              {/* LEFT COLUMN: Sidebar runs from VERY TOP (Logo) to BOTTOM (Settings) */}
+              {/* ================================================================= */}
+              <div className="w-10 sm:w-11 bg-[#080d15] border-r border-[#1a2332] flex flex-col justify-between shrink-0 select-none">
+                {/* Top: WorksAuto Brand Icon + ( > ) Sidebar Collapse Button */}
+                <div className="h-10 sm:h-11 border-b border-[#1a2332] flex items-center justify-center gap-1 px-1">
                   <div className="relative w-5 h-4 flex items-center justify-center">
                     <Image
                       src="/brand/worksauto-icon-white-tight.png"
@@ -66,146 +67,157 @@ export function ProductMockup() {
                       className="h-3.5 w-auto object-contain"
                     />
                   </div>
-
-                  {/* Collapse Sidebar Arrow Button */}
-                  <div className="w-4 h-4 rounded-full bg-[#111a26] border border-[#1f2d40] text-[#738094] flex items-center justify-center">
-                    <ChevronRight size={9} />
-                  </div>
-
-                  {/* Tenant Brand: BAYAR OTO SERVİS (Clean Typography, strictly no car logo) */}
-                  <div className="hidden sm:block leading-tight text-left ml-0.5">
-                    <div className="text-[10px] font-black text-white tracking-wide font-heading">
-                      BAYAR OTO SERVİS
-                    </div>
-                    <div className="text-[7.5px] text-[#738094] -mt-0.5">
-                      İstanbul / Başakşehir
-                    </div>
+                  <div className="w-3.5 h-3.5 rounded-full bg-[#111a26] border border-[#1f2d40] text-[#738094] flex items-center justify-center shrink-0">
+                    <ChevronRight size={8} />
                   </div>
                 </div>
 
-                {/* Center: Search Bar (Exact 1:1 Placeholder) */}
-                <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0e1624] border border-[#1a2332] text-[9px] text-[#9caac0] font-sans w-52 truncate">
-                  <Search size={10} className="text-[#738094] shrink-0" />
-                  <span className="truncate">Plaka, müşteri veya tel ara... (34 RB)</span>
-                </div>
-
-                {/* Right: + Hızlı Kabul, Notification, Theme, Workshop Dropdown, User Profile */}
-                <div className="flex items-center gap-2">
-                  <div className="hidden sm:flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#131d2c] border border-[#2357c5]/50 text-[9px] font-bold text-[#8fb4ff] shadow-xs">
-                    <Plus size={10} />
-                    <span>Hızlı Kabul</span>
+                {/* Navigation Icons Stack */}
+                <div className="py-2 px-1 space-y-2 flex flex-col items-center">
+                  {/* Active: Genel Bakış */}
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-[#2357c5] text-white flex items-center justify-center shadow-xs">
+                    <LayoutDashboard size={13} />
                   </div>
-
-                  <div className="relative text-[#9caac0]">
-                    <Bell size={12} />
-                    <span className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                  {/* İş Emirleri */}
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center relative">
+                    <Wrench size={13} />
+                    <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-[#3b72ea]" />
                   </div>
-
-                  <div className="hidden sm:flex items-center text-[#738094]">
-                    <Moon size={11} />
-                    <ChevronDown size={8} className="-ml-0.5" />
+                  {/* Randevular */}
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center">
+                    <Calendar size={13} />
                   </div>
-
-                  {/* Tenant Dropdown */}
-                  <div className="hidden md:flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#0d1421] border border-[#1a2332] text-[8.5px] text-[#9caac0]">
-                    <Building2 size={10} className="text-[#738094]" />
-                    <span className="truncate max-w-[85px]">Bayar Oto Servis</span>
-                    <ChevronDown size={8} />
+                  {/* Müşteriler */}
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center">
+                    <Users size={13} />
                   </div>
-
-                  <div className="hidden md:block h-3.5 w-[1px] bg-[#1a2332]" />
-
-                  {/* User Profile Avatar & Name */}
-                  <div className="flex items-center gap-1.5">
-                    <div className="w-5 h-5 rounded-full bg-[#1e2d42] border border-[#304460] flex items-center justify-center text-[7.5px] font-bold text-white font-mono">
-                      RB
-                    </div>
-                    <div className="hidden lg:block leading-tight text-left">
-                      <div className="text-[8.5px] font-bold text-white truncate max-w-[90px]">
-                        Rıdvan Emre Bayar
-                      </div>
-                      <div className="text-[6.5px] text-[#738094] -mt-0.5">
-                        Servis Yöneticisi
-                      </div>
-                    </div>
+                  {/* Kazanç */}
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center">
+                    <TrendingUp size={13} />
+                  </div>
+                  {/* Stok */}
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center">
+                    <Package size={13} />
+                  </div>
+                  {/* Faturalar */}
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center">
+                    <Receipt size={13} />
+                  </div>
+                  {/* Cariler */}
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center">
+                    <CreditCard size={13} />
                   </div>
                 </div>
-              </div>
 
-              {/* 2. Main Body: Sidebar + Workspace (1:1 with panel.worksauto.com.tr) */}
-              <div className="flex h-[325px] sm:h-[350px] overflow-hidden text-left">
-                {/* Left Sidebar (Matching Real Panel Icons) */}
-                <div className="w-9 sm:w-10 bg-[#080d15] border-r border-[#1a2332] py-2 px-1 flex flex-col items-center justify-between shrink-0">
-                  <div className="space-y-2 w-full flex flex-col items-center">
-                    {/* Active: Genel Bakış */}
-                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-[#2357c5] text-white flex items-center justify-center shadow-xs">
-                      <LayoutDashboard size={13} />
-                    </div>
-                    {/* İş Emirleri */}
-                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center relative">
-                      <Wrench size={13} />
-                      <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-[#3b72ea]" />
-                    </div>
-                    {/* Randevular */}
-                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center">
-                      <Calendar size={13} />
-                    </div>
-                    {/* Müşteriler */}
-                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center">
-                      <Users size={13} />
-                    </div>
-                    {/* Kazanç */}
-                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center">
-                      <TrendingUp size={13} />
-                    </div>
-                    {/* Stok */}
-                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center">
-                      <Package size={13} />
-                    </div>
-                    {/* Faturalar */}
-                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center">
-                      <Receipt size={13} />
-                    </div>
-                    {/* Cariler */}
-                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center">
-                      <CreditCard size={13} />
-                    </div>
-                  </div>
-
-                  {/* Settings at Bottom */}
+                {/* Bottom: Settings Cog */}
+                <div className="py-2 px-1 flex items-center justify-center">
                   <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-[#738094] flex items-center justify-center">
                     <Settings size={13} />
                   </div>
                 </div>
+              </div>
 
-                {/* Right Workspace: Authentic Dashboard Layout */}
-                <div className="flex-1 p-2.5 sm:p-3 overflow-hidden flex flex-col justify-between space-y-2">
-                  {/* Greeting & Header Telemetry */}
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <div className="text-[7.5px] font-extrabold uppercase tracking-widest text-[#8fb4ff] font-mono">
-                        2 EKİM 2026 CUMA · AKŞAM VARDİYASI
-                      </div>
-                      <h3 className="font-heading font-black text-xs sm:text-sm text-white tracking-tight mt-0.5">
-                        İyi akşamlar, Rıdvan
-                      </h3>
-                      <p className="text-[8px] text-[#738094] mt-0.5 truncate max-w-[260px] sm:max-w-[340px]">
-                        Lifter şu an müsait, sırada işleme alınmayı bekleyen 1 araç bulunuyor.
-                      </p>
+              {/* ================================================================= */}
+              {/* RIGHT COLUMN: Header + Dashboard Content                           */}
+              {/* ================================================================= */}
+              <div className="flex-1 flex flex-col overflow-hidden text-left min-w-0">
+                {/* 1. Header (Matching Real Panel Header 1:1) */}
+                <div className="h-10 sm:h-11 px-3 bg-[#0b1019] border-b border-[#1a2332] flex items-center justify-between text-xs select-none">
+                  {/* Tenant Brand: BAYAR OTO SERVİS (Clean Typography, no extra logo) */}
+                  <div className="leading-tight text-left shrink-0">
+                    <div className="text-[10px] sm:text-[10.5px] font-black text-white tracking-wide font-heading">
+                      BAYAR OTO SERVİS
+                    </div>
+                    <div className="text-[7px] sm:text-[7.5px] text-[#738094] -mt-0.5">
+                      İstanbul / Başakşehir
+                    </div>
+                  </div>
+
+                  {/* Center: Search Bar */}
+                  <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#0e1624] border border-[#1a2332] text-[9px] text-[#9caac0] font-sans w-48 lg:w-52 truncate">
+                    <Search size={10} className="text-[#738094] shrink-0" />
+                    <span className="truncate">Plaka, müşteri veya tel ara... (34 RB)</span>
+                  </div>
+
+                  {/* Right Header Controls */}
+                  <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                    {/* + Hızlı Kabul (Proper horizontal rounded-lg button, single line) */}
+                    <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#111c2c] border border-[#2357c5]/60 text-[9px] font-bold text-white shadow-xs cursor-pointer hover:bg-[#16253b]">
+                      <Plus size={10} className="text-[#8fb4ff]" />
+                      <span className="whitespace-nowrap">Hızlı Kabul</span>
                     </div>
 
-                    {/* Quick Action Buttons (Kazanç, Randevular, + Kabul) */}
-                    <div className="flex items-center gap-1.5 shrink-0">
-                      <div className="px-2 py-1 rounded-md bg-[#0f1725] border border-[#1a2332] text-[8px] font-bold text-[#8fb4ff] flex items-center gap-1 shadow-xs">
-                        <TrendingUp size={9} />
-                        <span>Kazanç</span>
+                    {/* Notification Bell */}
+                    <div className="relative text-[#9caac0] p-1 cursor-pointer">
+                      <Bell size={12} />
+                      <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    </div>
+
+                    {/* Theme Toggle Button in Box [ 🌙 ⌵ ] (Matching Real Panel) */}
+                    <div className="hidden sm:flex items-center gap-1 px-1.5 py-1 rounded-lg bg-[#0e1624] border border-[#1a2332] text-[#9caac0] cursor-pointer">
+                      <Moon size={11} />
+                      <ChevronDown size={8} className="text-[#738094]" />
+                    </div>
+
+                    {/* Workshop Dropdown [ 🏢 Bayar Oto Servis ⌵ ] */}
+                    <div className="hidden md:flex items-center gap-1.5 px-2 py-1 rounded-lg bg-[#0e1624] border border-[#1a2332] text-[8.5px] text-[#9caac0] cursor-pointer">
+                      <Building2 size={10} className="text-[#738094]" />
+                      <span className="truncate max-w-[85px]">Bayar Oto Servis</span>
+                      <ChevronDown size={8} className="text-[#738094]" />
+                    </div>
+
+                    {/* Divider */}
+                    <div className="hidden md:block h-3.5 w-[1px] bg-[#1a2332]" />
+
+                    {/* User Profile Avatar & Name */}
+                    <div className="flex items-center gap-1.5 cursor-pointer">
+                      <div className="w-5 h-5 rounded-full bg-[#1e2d42] border border-[#304460] flex items-center justify-center text-[7.5px] font-bold text-white font-mono">
+                        RB
                       </div>
-                      <div className="px-2 py-1 rounded-md bg-[#0f1725] border border-[#1a2332] text-[8px] font-bold text-white shadow-xs">
-                        Randevular
+                      <div className="hidden lg:block leading-tight text-left">
+                        <div className="text-[8.5px] font-bold text-white truncate max-w-[85px]">
+                          Rıdvan Emre Bayar
+                        </div>
+                        <div className="text-[6.5px] text-[#738094] -mt-0.5">
+                          Servis Yöneticisi
+                        </div>
                       </div>
-                      <div className="px-2 py-1 rounded-md bg-[#2357c5] text-[8px] font-bold text-white flex items-center gap-1 shadow-xs">
-                        <Plus size={10} />
-                        <span>Kabul</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 2. Workspace Body */}
+                <div className="p-2.5 sm:p-3 overflow-hidden flex flex-col justify-between space-y-2 h-[325px] sm:h-[350px]">
+                  {/* Greeting & Header Telemetry */}
+                  <div className="space-y-0.5">
+                    <div className="text-[7.5px] font-extrabold uppercase tracking-widest text-[#8fb4ff] font-mono">
+                      2 EKİM 2026 CUMA · AKŞAM VARDİYASI
+                    </div>
+
+                    {/* "İyi akşamlar, Rıdvan" and the Action Buttons on the EXACT SAME HORIZONTAL ROW */}
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="font-heading font-black text-xs sm:text-sm text-white tracking-tight">
+                          İyi akşamlar, Rıdvan
+                        </h3>
+                        <p className="text-[7.5px] sm:text-[8px] text-[#738094] mt-0.5 truncate max-w-[240px] sm:max-w-[320px]">
+                          Lifter şu an müsait, sırada işleme alınmayı bekleyen 1 araç bulunuyor.
+                        </p>
+                      </div>
+
+                      {/* Quick Action Buttons (Exact vertical alignment with "İyi akşamlar, Rıdvan") */}
+                      <div className="flex items-center gap-1.5 shrink-0">
+                        <div className="px-2 py-1 rounded-md bg-[#0f1725] border border-[#1a2332] text-[8px] font-bold text-[#8fb4ff] flex items-center gap-1 shadow-xs cursor-pointer">
+                          <TrendingUp size={9} />
+                          <span>Kazanç</span>
+                        </div>
+                        <div className="px-2 py-1 rounded-md bg-[#0f1725] border border-[#1a2332] text-[8px] font-bold text-white shadow-xs cursor-pointer">
+                          Randevular
+                        </div>
+                        <div className="px-2 py-1 rounded-md bg-[#2357c5] text-[8px] font-bold text-white flex items-center gap-1 shadow-xs cursor-pointer">
+                          <Plus size={10} />
+                          <span>Kabul</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -371,19 +383,19 @@ export function ProductMockup() {
 
           {/* ======================================================== */}
           {/* 3D REALISTIC MACBOOK PRO KEYBOARD BASE DECK              */}
-          {/* Matches the open laptop perspective of reference image   */}
+          {/* Flush w-full, perfectly centered keyboard & trackpad     */}
           {/* ======================================================== */}
-          <div className="relative w-[103%] -left-[1.5%] bg-gradient-to-b from-[#1c2432] via-[#141b25] to-[#0a0e15] rounded-b-2xl border-x border-b border-[#323d4e] shadow-[0_30px_60px_rgba(0,0,0,0.95)] pt-1 pb-3 px-3.5">
+          <div className="relative w-full bg-gradient-to-b from-[#1c2432] via-[#141b25] to-[#0a0e15] rounded-b-2xl border-x border-b border-[#323d4e] shadow-[0_30px_60px_rgba(0,0,0,0.95)] pt-1 pb-3 px-3 sm:px-4">
             {/* Top Hinge Bar */}
             <div className="w-[85%] h-1.5 bg-[#06080d] border-b border-white/5 mx-auto rounded-xs mb-1.5" />
 
-            {/* Keyboard Deck & Side Speakers Surface */}
-            <div className="flex items-start justify-between gap-2 px-1">
+            {/* Symmetrical Keyboard Deck: Left Speaker, Keyboard, Right Speaker */}
+            <div className="flex items-start justify-center gap-2 sm:gap-3">
               {/* Left Stereo Speaker Grille */}
               <div className="w-5 sm:w-6 h-20 sm:h-22 rounded-xs opacity-50 bg-[radial-gradient(#3a4659_1px,transparent_1px)] [background-size:3px_3px] shrink-0" />
 
-              {/* Recessed Apple Chiclet Keyboard Well */}
-              <div className="flex-1 rounded-lg bg-[#07090e] border border-[#18212e] p-1.5 shadow-[inset_0_2px_8px_rgba(0,0,0,0.9)] space-y-1">
+              {/* Centered Recessed Apple Chiclet Keyboard Well */}
+              <div className="flex-1 rounded-lg bg-[#07090e] border border-[#18212e] p-1.5 shadow-[inset_0_2px_8px_rgba(0,0,0,0.9)] space-y-1 max-w-[500px]">
                 {/* Row 1: Function Row */}
                 <div className="grid grid-cols-12 gap-0.5 sm:gap-1">
                   {Array.from({ length: 12 }).map((_, i) => (
@@ -438,19 +450,13 @@ export function ProductMockup() {
               <div className="w-5 sm:w-6 h-20 sm:h-22 rounded-xs opacity-50 bg-[radial-gradient(#3a4659_1px,transparent_1px)] [background-size:3px_3px] shrink-0" />
             </div>
 
-            {/* Apple Force Touch Glass Trackpad */}
-            <div className="w-32 sm:w-40 h-10 sm:h-12 mx-auto rounded-lg bg-[#0e141f] border border-[#232d3d] mt-1.5 shadow-inner relative">
+            {/* Centered Apple Force Touch Glass Trackpad */}
+            <div className="w-32 sm:w-38 h-9 sm:h-11 mx-auto rounded-lg bg-[#0e141f] border border-[#232d3d] mt-1.5 shadow-inner relative">
               <div className="absolute top-0 inset-x-2 h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent" />
             </div>
 
-            {/* Front Unibody Aluminum Lip with Precision Apple Thumb Scoop */}
+            {/* Centered Apple Thumb Notch Scoop */}
             <div className="w-20 sm:w-24 h-1.5 bg-[#06080d] rounded-b-md border-x border-b border-white/15 mx-auto shadow-inner mt-1" />
-
-            {/* Right-Side Aluminum Profile & Port Cutouts (Visible in 3D perspective) */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1.5 h-12 flex flex-col justify-center gap-1.5 pr-0.5">
-              <span className="w-1 h-2 rounded-full bg-[#05070a] border border-white/10" />
-              <span className="w-1 h-2 rounded-full bg-[#05070a] border border-white/10" />
-            </div>
           </div>
 
           {/* Smooth Desktop Ambient Contact Shadow */}
@@ -459,10 +465,10 @@ export function ProductMockup() {
 
         {/* ======================================================== */}
         {/* 2. REALISTIC SLENDER IPHONE 16 PRO (MOBILE PANEL 1:1)    */}
-        {/* Slightly overlapping the laptop base in 3D perspective   */}
+        {/* Standing to the right, overlapping only the right edge   */}
         {/* ======================================================== */}
         <div
-          className="relative mt-8 sm:mt-0 sm:absolute sm:-bottom-4 sm:right-0 lg:-right-2 xl:-right-4 z-40 w-[242px] sm:w-[254px] mx-auto drop-shadow-[0_35px_80px_rgba(0,0,0,0.98)] [transform-style:preserve-3d] transition-all duration-700"
+          className="relative mt-8 sm:mt-0 sm:absolute sm:-bottom-4 sm:-right-4 lg:-right-6 xl:-right-10 z-40 w-[242px] sm:w-[254px] mx-auto drop-shadow-[0_35px_80px_rgba(0,0,0,0.98)] [transform-style:preserve-3d] transition-all duration-700"
           style={{ transform: "rotateY(-5deg) rotateX(2deg)" }}
         >
           {/* Physical Side Buttons */}
