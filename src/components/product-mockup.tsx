@@ -470,7 +470,7 @@ export function ProductMockup() {
         {/* Positioned right beside the laptop with perfect balance  */}
         {/* ======================================================== */}
         <div
-          className="relative mt-8 sm:mt-0 sm:absolute sm:-bottom-4 sm:-right-2 lg:-right-4 xl:-right-8 z-40 w-[242px] sm:w-[254px] mx-auto drop-shadow-[0_35px_80px_rgba(0,0,0,0.98)] [transform-style:preserve-3d] transition-all duration-700"
+          className="relative mt-8 sm:mt-0 sm:absolute sm:-bottom-4 sm:-right-2 lg:-right-4 xl:-right-8 z-40 w-[250px] sm:w-[262px] mx-auto drop-shadow-[0_35px_80px_rgba(0,0,0,0.98)] [transform-style:preserve-3d] transition-all duration-700"
           style={{ transform: "rotateY(-5deg) rotateX(2deg)" }}
         >
           {/* Physical Side Buttons */}
@@ -480,11 +480,11 @@ export function ProductMockup() {
           <div className="absolute -right-[3px] top-30 w-[3px] h-14 bg-[#3a4454] rounded-r-sm border-r border-white/20" />
 
           {/* Natural Titanium Chassis Frame */}
-          <div className="rounded-[46px] p-2.5 bg-gradient-to-b from-[#3a4556] via-[#222a36] to-[#141a24] border-[2px] border-[#4a576c] ring-1 ring-white/10 shadow-2xl">
+          <div className="rounded-[46px] p-2 sm:p-2.5 bg-gradient-to-b from-[#3a4556] via-[#222a36] to-[#141a24] border-[2px] border-[#4a576c] ring-1 ring-white/10 shadow-2xl">
             {/* Display Glass (Slender 19.5:9 Apple Screen) */}
             <div className="rounded-[38px] bg-[#070b12] border border-black overflow-hidden h-[525px] flex flex-col justify-between font-sans text-xs text-left shadow-inner">
               {/* Top Section */}
-              <div className="p-3 space-y-1.5">
+              <div className="p-2.5 sm:p-3 space-y-1.5">
                 {/* 1. Apple Status Bar (09:43, Dynamic Island, 5G & Battery) */}
                 <div className="flex items-center justify-between px-1 select-none text-[10px]">
                   <span className="font-bold text-white tracking-tight font-sans text-[11px]">
@@ -507,42 +507,44 @@ export function ProductMockup() {
                   </div>
                 </div>
 
-                {/* 2. Mobile App Header (Exact 1:1 with real mobile panel screenshot) */}
-                <div className="flex items-center justify-between pt-1 pb-2 border-b border-[#1a2332]/80">
-                  {/* Left: Clean Hamburger Icon + BAYAR OTO SERVİS (single line, bold white) */}
-                  <div className="flex items-center gap-2">
-                    <div className="text-white cursor-pointer hover:text-[#8fb4ff] flex items-center justify-center">
-                      <Menu size={16} strokeWidth={2.2} />
+                {/* 2. Mobile App Header (Exact 1:1 with real mobile panel screenshot, scaled to fit perfectly) */}
+                <div className="flex items-center justify-between pt-0.5 pb-2 border-b border-[#1a2332]/80">
+                  {/* Left: Rounded Dark Box Hamburger + (BAYAR OTO / İstanbul / Başakşehir) */}
+                  <div className="flex items-center gap-1.5 min-w-0">
+                    <div className="w-[22px] h-[22px] rounded-md bg-[#0e1624] border border-[#1f2d40] flex items-center justify-center text-white/90 shrink-0 cursor-pointer shadow-xs">
+                      <Menu size={11} strokeWidth={2.2} />
                     </div>
-                    <span className="text-[10px] font-black text-white tracking-wide font-heading uppercase whitespace-nowrap">
-                      BAYAR OTO SERVİS
-                    </span>
+                    <div className="flex flex-col min-w-0 leading-tight">
+                      <span className="text-[8.5px] font-black text-white tracking-wide font-heading uppercase truncate">
+                        BAYAR OTO
+                      </span>
+                      <span className="text-[6.5px] text-[#738094] font-medium leading-none truncate">
+                        İstanbul / Başakşehir
+                      </span>
+                    </div>
                   </div>
 
-                  {/* Right: Bell with dot, [🌙] box, [🏢 ⌵] box, Divider |, [RB] circle */}
-                  <div className="flex items-center gap-1.5">
-                    {/* Notification Bell */}
-                    <div className="relative text-white p-0.5 cursor-pointer">
-                      <Bell size={13} />
-                      <span className="absolute bottom-0 right-0 w-1.5 h-1.5 rounded-full bg-emerald-400 ring-2 ring-[#070b12]" />
+                  {/* Right: Bell with top-right green dot, Moon, [🏢 ⌵] box, (RB) avatar */}
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    {/* Notification Bell with green dot */}
+                    <div className="relative text-white/80 p-0.5 cursor-pointer hover:text-white flex items-center justify-center">
+                      <Bell size={11} strokeWidth={2} />
+                      <span className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-emerald-400 ring-1.5 ring-[#070b12]" />
                     </div>
 
-                    {/* Theme Box [ 🌙 ] */}
-                    <div className="w-6 h-6 rounded-lg bg-[#0e1624] border border-[#1f2d40] flex items-center justify-center text-[#8fb4ff] shadow-xs cursor-pointer">
+                    {/* Theme Toggle (Moon) */}
+                    <div className="text-[#8fb4ff] hover:text-white cursor-pointer p-0.5 flex items-center justify-center">
                       <Moon size={11} strokeWidth={2} />
                     </div>
 
                     {/* Workshop Switcher Box [ 🏢 ⌵ ] */}
-                    <div className="h-6 px-1.5 rounded-lg bg-[#0e1624] border border-[#1f2d40] flex items-center gap-1 text-[#8fb4ff] shadow-xs cursor-pointer">
-                      <Building2 size={11} strokeWidth={2} />
-                      <ChevronDown size={8} strokeWidth={2.5} className="text-[#8fb4ff]" />
+                    <div className="h-[21px] px-1.5 rounded-md bg-[#0e1624] border border-[#1f2d40] flex items-center gap-1 text-[#8fb4ff] shadow-xs cursor-pointer">
+                      <Building2 size={10} strokeWidth={2} />
+                      <ChevronDown size={7} strokeWidth={2.5} className="text-[#8fb4ff]" />
                     </div>
 
-                    {/* Subtle 1px Divider */}
-                    <div className="h-4 w-[1px] bg-[#1a2332] mx-0.5" />
-
                     {/* [RB] Avatar Circle */}
-                    <div className="w-5 h-5 rounded-full bg-[#1b345f] border border-[#2b4d85] flex items-center justify-center text-[7.5px] font-black text-white font-mono shadow-xs cursor-pointer">
+                    <div className="w-[20px] h-[20px] rounded-full bg-[#1b345f] border border-[#2b4d85] flex items-center justify-center text-[7px] font-bold text-white font-mono shadow-xs cursor-pointer">
                       RB
                     </div>
                   </div>
