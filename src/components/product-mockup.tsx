@@ -123,65 +123,65 @@ export function ProductMockup() {
               {/* RIGHT COLUMN: Perfectly Balanced Header + Workspace                */}
               {/* ================================================================= */}
               <div className="flex-1 flex flex-col overflow-hidden text-left min-w-0">
-                {/* 1. Header (Balanced proportions, no squeezing, no overflow) */}
-                <div className="h-11 pl-3.5 pr-2.5 bg-[#0b1019] border-b border-[#1a2332] flex items-center justify-between text-xs select-none gap-2">
-                  {/* Tenant Brand: BAYAR OTO SERVİS (Clean typography, strictly no extra car logo) */}
+                {/* 1. Header (Exact 1:1 with real PC panel screenshot, micro-proportioned) */}
+                <div className="h-10 sm:h-11 pl-3.5 pr-3 bg-[#0b1019] border-b border-[#1a2332] flex items-center justify-between text-xs select-none gap-2">
+                  {/* Tenant Brand: BAYAR OTO SERVİS */}
                   <div className="leading-tight text-left shrink-0">
-                    <div className="text-[10px] font-black text-white tracking-wide font-heading">
+                    <div className="text-[9.5px] font-black text-white tracking-wide font-heading uppercase whitespace-nowrap">
                       BAYAR OTO SERVİS
                     </div>
-                    <div className="text-[7px] text-[#738094] -mt-0.5">
+                    <div className="text-[6.5px] text-[#738094] -mt-0.5">
                       İstanbul / Başakşehir
                     </div>
                   </div>
 
-                  {/* Center: Search Bar (Guaranteed minimum width, never shrinks to a square) */}
-                  <div className="flex-1 min-w-[130px] max-w-[200px] h-7 px-2.5 rounded-lg bg-[#0e1624] border border-[#1a2332] text-[8px] text-[#9caac0] font-sans flex items-center gap-1.5 shrink-0">
-                    <Search size={10} className="text-[#738094] shrink-0" />
-                    <span className="truncate">Plaka, müşteri veya tel ara...</span>
+                  {/* Center: Search Bar (Proportional width, authentic placeholder from real panel) */}
+                  <div className="flex-1 min-w-[110px] max-w-[190px] lg:max-w-[240px] h-[26px] px-2 rounded-lg bg-[#0e1624] border border-[#1a2332] text-[7.5px] text-[#9caac0] font-sans flex items-center gap-1.5 shrink-0">
+                    <Search size={9.5} className="text-[#738094] shrink-0" />
+                    <span className="truncate">Plaka, müşteri veya telefon ara.. (örn: 34 RB 1905)</span>
                   </div>
 
-                  {/* Right Header Controls (Compact desktop proportions, fits without clipping) */}
+                  {/* Right Header Controls (Exact 1:1 with real PC panel screenshot) */}
                   <div className="flex items-center gap-1.5 shrink-0">
-                    {/* + Hızlı Kabul (Single-line horizontal rounded-lg button) */}
-                    <div className="flex items-center gap-1 h-7 px-2 sm:px-2.5 rounded-lg bg-[#111c2c] border border-[#2357c5]/50 text-[8.5px] font-bold text-white shadow-xs cursor-pointer hover:bg-[#16253b] shrink-0">
-                      <Plus size={10} className="text-[#8fb4ff]" />
+                    {/* + Hızlı Kabul */}
+                    <div className="flex items-center gap-1 h-[26px] px-2 rounded-md bg-[#0e1624] border border-[#2357c5]/50 text-[7.5px] font-bold text-white shadow-xs cursor-pointer hover:bg-[#16253b] shrink-0">
+                      <Plus size={9} className="text-[#8fb4ff]" />
                       <span className="whitespace-nowrap">Hızlı Kabul</span>
                     </div>
 
-                    {/* Notification Bell */}
-                    <div className="relative text-[#9caac0] p-1 cursor-pointer hover:text-white shrink-0">
-                      <Bell size={11} />
-                      <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    {/* Notification Bell (Green dot at bottom-right matching real panel) */}
+                    <div className="relative text-[#9caac0] p-1 cursor-pointer hover:text-white flex items-center justify-center shrink-0">
+                      <Bell size={11} strokeWidth={2} />
+                      <span className="absolute -bottom-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-emerald-400 ring-1.5 ring-[#0b1019]" />
                     </div>
 
                     {/* Theme Toggle Button in Box [ 🌙 ⌵ ] */}
-                    <div className="flex items-center gap-0.5 h-7 px-1.5 rounded-lg bg-[#0e1624] border border-[#1a2332] text-[#9caac0] cursor-pointer hover:border-slate-700 shrink-0">
-                      <Moon size={10} />
-                      <ChevronDown size={7} className="text-[#738094]" />
+                    <div className="flex items-center gap-0.5 h-[26px] px-1.5 rounded-md bg-[#0e1624] border border-[#1a2332] text-[#9caac0] cursor-pointer hover:border-slate-700 shrink-0">
+                      <Moon size={9.5} strokeWidth={2} />
+                      <ChevronDown size={6.5} strokeWidth={2.5} className="text-[#738094]" />
                     </div>
 
-                    {/* Workshop Dropdown [ 🏢 Bayar Oto ⌵ ] */}
-                    <div className="flex items-center gap-1 h-7 px-2 rounded-lg bg-[#0e1624] border border-[#1a2332] text-[8px] text-[#9caac0] cursor-pointer hover:border-slate-700 shrink-0">
-                      <Building2 size={9} className="text-[#738094]" />
-                      <span className="truncate max-w-[60px] sm:max-w-[75px]">Bayar Oto</span>
-                      <ChevronDown size={7} className="text-[#738094]" />
+                    {/* Workshop Dropdown [ 🏢 Bayar Oto Servis ⌵ ] */}
+                    <div className="flex items-center gap-1 h-[26px] px-2 rounded-md bg-[#0e1624] border border-[#1a2332] text-[7.5px] text-[#9caac0] cursor-pointer hover:border-slate-700 shrink-0">
+                      <Building2 size={9.5} strokeWidth={2} className="text-[#738094]" />
+                      <span className="text-white font-medium truncate max-w-[70px] sm:max-w-[90px]">Bayar Oto Servis</span>
+                      <ChevronDown size={6.5} strokeWidth={2.5} className="text-[#738094]" />
                     </div>
 
                     {/* Divider */}
-                    <div className="h-3.5 w-[1px] bg-[#1a2332] shrink-0" />
+                    <div className="h-3.5 w-[1px] bg-[#1a2332] shrink-0 mx-0.5" />
 
-                    {/* User Profile Avatar & Name */}
+                    {/* User Profile Avatar & Name (Rıdvan Emre Bayar / Servis Yöneticisi) */}
                     <div className="flex items-center gap-1.5 cursor-pointer shrink-0">
-                      <div className="w-5 h-5 rounded-full bg-[#1e2d42] border border-[#304460] flex items-center justify-center text-[7.5px] font-bold text-white font-mono">
+                      <div className="w-[20px] h-[20px] rounded-full bg-[#1b345f] border border-[#2b4d85] flex items-center justify-center text-[7px] font-bold text-white font-mono shadow-xs">
                         RB
                       </div>
-                      <div className="hidden lg:block leading-tight text-left">
-                        <div className="text-[8.5px] font-bold text-white truncate max-w-[80px]">
-                          Rıdvan Emre B.
+                      <div className="hidden sm:block leading-tight text-left">
+                        <div className="text-[7.5px] font-bold text-white truncate max-w-[85px] whitespace-nowrap">
+                          Rıdvan Emre Bayar
                         </div>
-                        <div className="text-[6.5px] text-[#738094] -mt-0.5">
-                          Yönetici
+                        <div className="text-[6px] text-[#738094] -mt-0.5 leading-none">
+                          Servis Yöneticisi
                         </div>
                       </div>
                     </div>
