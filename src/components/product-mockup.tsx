@@ -507,34 +507,42 @@ export function ProductMockup() {
                   </div>
                 </div>
 
-                {/* 2. Mobile App Header (Matching Screenshot 2 1:1) */}
-                <div className="flex items-center justify-between pt-1 border-b border-[#1a2332] pb-1.5">
-                  <div className="flex items-center gap-1.5">
-                    <div className="w-6 h-6 rounded-lg bg-[#111a26] border border-[#1a2332] flex items-center justify-center text-[#9caac0]">
-                      <Menu size={12} />
+                {/* 2. Mobile App Header (Exact 1:1 with real mobile panel screenshot) */}
+                <div className="flex items-center justify-between pt-1 pb-2 border-b border-[#1a2332]/80">
+                  {/* Left: Clean Hamburger Icon + BAYAR OTO SERVİS (single line, bold white) */}
+                  <div className="flex items-center gap-2">
+                    <div className="text-white cursor-pointer hover:text-[#8fb4ff] flex items-center justify-center">
+                      <Menu size={16} strokeWidth={2.2} />
                     </div>
-                    {/* BAYAR OTO SERVİS Logo */}
-                    <div className="leading-tight text-left">
-                      <div className="text-[9.5px] font-black text-white tracking-wide font-heading">
-                        BAYAR OTO
-                      </div>
-                      <div className="text-[6.5px] text-[#738094] -mt-0.5">
-                        İstanbul / Başakşehir
-                      </div>
-                    </div>
+                    <span className="text-[10px] font-black text-white tracking-wide font-heading uppercase whitespace-nowrap">
+                      BAYAR OTO SERVİS
+                    </span>
                   </div>
 
+                  {/* Right: Bell with dot, [🌙] box, [🏢 ⌵] box, Divider |, [RB] circle */}
                   <div className="flex items-center gap-1.5">
-                    <div className="relative text-[#9caac0]">
-                      <Bell size={11} />
-                      <span className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    {/* Notification Bell */}
+                    <div className="relative text-white p-0.5 cursor-pointer">
+                      <Bell size={13} />
+                      <span className="absolute bottom-0 right-0 w-1.5 h-1.5 rounded-full bg-emerald-400 ring-2 ring-[#070b12]" />
                     </div>
-                    <Moon size={10} className="text-[#738094]" />
-                    <div className="flex items-center gap-0.5 px-1 py-0.5 rounded bg-[#111a26] border border-[#1a2332] text-[7.5px] text-[#9caac0]">
-                      <Building2 size={8} />
-                      <ChevronDown size={6} />
+
+                    {/* Theme Box [ 🌙 ] */}
+                    <div className="w-6 h-6 rounded-lg bg-[#0e1624] border border-[#1f2d40] flex items-center justify-center text-[#8fb4ff] shadow-xs cursor-pointer">
+                      <Moon size={11} strokeWidth={2} />
                     </div>
-                    <div className="w-5 h-5 rounded-full bg-[#1e2d42] border border-[#304460] flex items-center justify-center text-[7.5px] font-bold text-white font-mono">
+
+                    {/* Workshop Switcher Box [ 🏢 ⌵ ] */}
+                    <div className="h-6 px-1.5 rounded-lg bg-[#0e1624] border border-[#1f2d40] flex items-center gap-1 text-[#8fb4ff] shadow-xs cursor-pointer">
+                      <Building2 size={11} strokeWidth={2} />
+                      <ChevronDown size={8} strokeWidth={2.5} className="text-[#8fb4ff]" />
+                    </div>
+
+                    {/* Subtle 1px Divider */}
+                    <div className="h-4 w-[1px] bg-[#1a2332] mx-0.5" />
+
+                    {/* [RB] Avatar Circle */}
+                    <div className="w-5 h-5 rounded-full bg-[#1b345f] border border-[#2b4d85] flex items-center justify-center text-[7.5px] font-black text-white font-mono shadow-xs cursor-pointer">
                       RB
                     </div>
                   </div>
