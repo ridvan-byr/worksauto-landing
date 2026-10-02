@@ -15,10 +15,10 @@ export function SocialProof() {
     {
       name: "BOSCH",
       svg: (
-        <svg viewBox="0 0 160 36" className="h-6 sm:h-7 w-auto fill-current">
-          <circle cx="18" cy="18" r="14" fill="none" stroke="currentColor" strokeWidth="3" />
-          <path d="M11 18h14M18 11v14" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-          <text x="44" y="24" fontFamily="sans-serif" fontSize="20" fontWeight="900" letterSpacing="1">
+        <svg viewBox="0 0 160 36" className="h-6 sm:h-7 w-auto">
+          <circle cx="18" cy="18" r="14" fill="none" stroke="#EA0016" strokeWidth="3" />
+          <path d="M11 18h14M18 11v14" stroke="#EA0016" strokeWidth="3" strokeLinecap="round" />
+          <text x="44" y="24" fill="#FFFFFF" fontFamily="sans-serif" fontSize="20" fontWeight="900" letterSpacing="1">
             BOSCH
           </text>
         </svg>
@@ -27,10 +27,10 @@ export function SocialProof() {
     {
       name: "CASTROL",
       svg: (
-        <svg viewBox="0 0 170 36" className="h-6 sm:h-7 w-auto fill-current">
-          <circle cx="18" cy="18" r="13" fill="none" stroke="currentColor" strokeWidth="3.5" />
-          <path d="M12 18a6 6 0 0 1 12 0" stroke="currentColor" strokeWidth="3" fill="none" />
-          <text x="44" y="24" fontFamily="sans-serif" fontSize="19" fontWeight="900" fontStyle="italic" letterSpacing="0.5">
+        <svg viewBox="0 0 170 36" className="h-6 sm:h-7 w-auto">
+          <circle cx="18" cy="18" r="13" fill="none" stroke="#00C853" strokeWidth="3.5" />
+          <path d="M12 18a6 6 0 0 1 12 0" stroke="#FF3344" strokeWidth="3.5" fill="none" />
+          <text x="44" y="24" fill="#FFFFFF" fontFamily="sans-serif" fontSize="19" fontWeight="900" fontStyle="italic" letterSpacing="0.5">
             Castrol
           </text>
         </svg>
@@ -39,10 +39,10 @@ export function SocialProof() {
     {
       name: "BREMBO",
       svg: (
-        <svg viewBox="0 0 170 36" className="h-6 sm:h-7 w-auto fill-current">
-          <circle cx="14" cy="18" r="9" fill="none" stroke="currentColor" strokeWidth="3" />
-          <circle cx="14" cy="18" r="4" fill="currentColor" />
-          <text x="36" y="24" fontFamily="sans-serif" fontSize="20" fontWeight="800" fontStyle="italic" letterSpacing="1">
+        <svg viewBox="0 0 170 36" className="h-6 sm:h-7 w-auto">
+          <circle cx="14" cy="18" r="9" fill="none" stroke="#FF2D37" strokeWidth="3" />
+          <circle cx="14" cy="18" r="4" fill="#FF2D37" />
+          <text x="36" y="24" fill="#FF2D37" fontFamily="sans-serif" fontSize="20" fontWeight="800" fontStyle="italic" letterSpacing="1">
             brembo
           </text>
         </svg>
@@ -51,8 +51,9 @@ export function SocialProof() {
     {
       name: "MOTUL",
       svg: (
-        <svg viewBox="0 0 150 36" className="h-6 sm:h-7 w-auto fill-current">
-          <text x="4" y="26" fontFamily="sans-serif" fontSize="24" fontWeight="900" fontStyle="italic" letterSpacing="2">
+        <svg viewBox="0 0 150 36" className="h-6 sm:h-7 w-auto">
+          <rect x="2" y="4" width="144" height="28" rx="6" fill="#ED1C24" />
+          <text x="74" y="24" textAnchor="middle" fill="#FFFFFF" fontFamily="sans-serif" fontSize="20" fontWeight="900" fontStyle="italic" letterSpacing="2">
             MOTUL
           </text>
         </svg>
@@ -61,12 +62,12 @@ export function SocialProof() {
     {
       name: "MAGNETI MARELLI",
       svg: (
-        <svg viewBox="0 0 210 36" className="h-6 sm:h-7 w-auto fill-current">
-          <path d="M6 24V12l8 8 8-8v12" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-          <text x="32" y="19" fontFamily="sans-serif" fontSize="13" fontWeight="900" letterSpacing="1">
+        <svg viewBox="0 0 210 36" className="h-6 sm:h-7 w-auto">
+          <path d="M6 24V12l8 8 8-8v12" fill="none" stroke="#38BDF8" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+          <text x="32" y="19" fill="#38BDF8" fontFamily="sans-serif" fontSize="13" fontWeight="900" letterSpacing="1">
             MAGNETI
           </text>
-          <text x="32" y="30" fontFamily="sans-serif" fontSize="11" fontWeight="800" letterSpacing="1.5">
+          <text x="32" y="30" fill="#FACC15" fontFamily="sans-serif" fontSize="11" fontWeight="800" letterSpacing="1.5">
             MARELLI
           </text>
         </svg>
@@ -75,9 +76,9 @@ export function SocialProof() {
     {
       name: "MOBIL 1",
       svg: (
-        <svg viewBox="0 0 150 36" className="h-6 sm:h-7 w-auto fill-current">
-          <text x="6" y="25" fontFamily="sans-serif" fontSize="22" fontWeight="900" letterSpacing="1">
-            Mobil <tspan fontSize="24" fontStyle="italic">1</tspan>
+        <svg viewBox="0 0 150 36" className="h-6 sm:h-7 w-auto">
+          <text x="6" y="25" fill="#38BDF8" fontFamily="sans-serif" fontSize="22" fontWeight="900" letterSpacing="1">
+            Mobil <tspan fill="#EF4444" fontSize="24" fontStyle="italic">1</tspan>
           </text>
         </svg>
       ),
@@ -85,13 +86,13 @@ export function SocialProof() {
     {
       name: "LIQUI MOLY",
       svg: (
-        <svg viewBox="0 0 190 36" className="h-6 sm:h-7 w-auto fill-current">
-          <rect x="6" y="8" width="20" height="20" rx="4" fill="none" stroke="currentColor" strokeWidth="2.5" />
-          <path d="M12 12v12h8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-          <text x="36" y="19" fontFamily="sans-serif" fontSize="13" fontWeight="900" letterSpacing="1">
+        <svg viewBox="0 0 190 36" className="h-6 sm:h-7 w-auto">
+          <rect x="6" y="7" width="22" height="22" rx="4" fill="#0284C7" />
+          <path d="M12 11v14h10" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+          <text x="36" y="19" fill="#38BDF8" fontFamily="sans-serif" fontSize="13" fontWeight="900" letterSpacing="1">
             LIQUI
           </text>
-          <text x="36" y="30" fontFamily="sans-serif" fontSize="12" fontWeight="800" letterSpacing="1.5">
+          <text x="36" y="30" fill="#EF4444" fontFamily="sans-serif" fontSize="12" fontWeight="900" letterSpacing="1.5">
             MOLY
           </text>
         </svg>
@@ -100,12 +101,12 @@ export function SocialProof() {
     {
       name: "MANN FILTER",
       svg: (
-        <svg viewBox="0 0 190 36" className="h-6 sm:h-7 w-auto fill-current">
-          <polygon points="6,26 16,10 26,26" fill="none" stroke="currentColor" strokeWidth="2.5" />
-          <text x="36" y="19" fontFamily="sans-serif" fontSize="13" fontWeight="900" letterSpacing="1">
+        <svg viewBox="0 0 190 36" className="h-6 sm:h-7 w-auto">
+          <polygon points="6,27 16,9 26,27" fill="#10B981" />
+          <text x="36" y="19" fill="#FACC15" fontFamily="sans-serif" fontSize="14" fontWeight="900" letterSpacing="1">
             MANN
           </text>
-          <text x="36" y="29" fontFamily="sans-serif" fontSize="10" fontWeight="700" letterSpacing="2">
+          <text x="36" y="29" fill="#34D399" fontFamily="sans-serif" fontSize="10" fontWeight="800" letterSpacing="2">
             FILTER
           </text>
         </svg>
@@ -114,10 +115,10 @@ export function SocialProof() {
     {
       name: "PARAŞÜT",
       svg: (
-        <svg viewBox="0 0 170 36" className="h-6 sm:h-7 w-auto fill-current">
-          <path d="M16 8c-6 0-10 4-10 9s10 11 10 11 10-6 10-11-4-9-10-9z" fill="none" stroke="currentColor" strokeWidth="2.5" />
-          <circle cx="16" cy="17" r="3" />
-          <text x="36" y="24" fontFamily="sans-serif" fontSize="19" fontWeight="800" letterSpacing="0.5">
+        <svg viewBox="0 0 170 36" className="h-6 sm:h-7 w-auto">
+          <path d="M16 8c-6 0-10 4-10 9s10 11 10 11 10-6 10-11-4-9-10-9z" fill="none" stroke="#14B8A6" strokeWidth="2.5" />
+          <circle cx="16" cy="17" r="3" fill="#14B8A6" />
+          <text x="36" y="24" fill="#14B8A6" fontFamily="sans-serif" fontSize="19" fontWeight="800" letterSpacing="0.5">
             paraşüt
           </text>
         </svg>
@@ -126,10 +127,10 @@ export function SocialProof() {
     {
       name: "NILVERA",
       svg: (
-        <svg viewBox="0 0 160 36" className="h-6 sm:h-7 w-auto fill-current">
-          <circle cx="16" cy="18" r="10" fill="none" stroke="currentColor" strokeWidth="2.5" />
-          <path d="M12 22l8-8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-          <text x="36" y="24" fontFamily="sans-serif" fontSize="18" fontWeight="800" letterSpacing="1">
+        <svg viewBox="0 0 160 36" className="h-6 sm:h-7 w-auto">
+          <circle cx="16" cy="18" r="10" fill="none" stroke="#A855F7" strokeWidth="2.5" />
+          <path d="M12 22l8-8" stroke="#A855F7" strokeWidth="2.5" strokeLinecap="round" />
+          <text x="36" y="24" fill="#C084FC" fontFamily="sans-serif" fontSize="18" fontWeight="800" letterSpacing="1">
             nilvera
           </text>
         </svg>
@@ -138,9 +139,9 @@ export function SocialProof() {
     {
       name: "PAYTR",
       svg: (
-        <svg viewBox="0 0 150 36" className="h-6 sm:h-7 w-auto fill-current">
-          <text x="6" y="25" fontFamily="sans-serif" fontSize="22" fontWeight="900" fontStyle="italic" letterSpacing="1">
-            Pay<tspan fontWeight="400">TR</tspan>
+        <svg viewBox="0 0 150 36" className="h-6 sm:h-7 w-auto">
+          <text x="6" y="25" fill="#38BDF8" fontFamily="sans-serif" fontSize="22" fontWeight="900" fontStyle="italic" letterSpacing="1">
+            Pay<tspan fill="#F97316" fontWeight="800">TR</tspan>
           </text>
         </svg>
       ),
@@ -179,7 +180,7 @@ export function SocialProof() {
               {marqueeItems.map((item, idx) => (
                 <div
                   key={idx}
-                  className="shrink-0 text-slate-400 hover:text-white transition-all duration-300 cursor-pointer flex items-center justify-center opacity-70 hover:opacity-100 transform hover:scale-105"
+                  className="shrink-0 transition-all duration-300 cursor-pointer flex items-center justify-center opacity-85 hover:opacity-100 transform hover:scale-105"
                   title={item.name}
                 >
                   {item.svg}
