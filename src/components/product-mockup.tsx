@@ -20,6 +20,7 @@ import {
   Menu,
   Moon,
   ChevronDown,
+  ChevronRight,
   Building2,
   CheckCircle2,
 } from "lucide-react";
@@ -30,32 +31,32 @@ export function ProductMockup() {
       {/* Background Studio Ambient Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] bg-gradient-to-tr from-[#2357c5]/25 via-[#3b72ea]/15 to-[#8fb4ff]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
-      {/* Main Dual Device Stage (Zero Floating Boxes) */}
-      <div className="relative pt-2 pb-6 sm:pb-10">
+      {/* Main Dual Device Stage with 3D Studio Depth */}
+      <div className="relative pt-2 pb-6 sm:pb-12 [perspective:1500px]">
         {/* ======================================================== */}
-        {/* 1. SEAMLESS REALISTIC MACBOOK PRO (DESKTOP PANEL 1:1)    */}
+        {/* 1. CINEMATIC 3D MACBOOK PRO WITH KEYBOARD DECK           */}
         {/* ======================================================== */}
-        <div className="relative w-full max-w-[620px] sm:max-w-[670px] lg:max-w-[610px] xl:max-w-[670px]">
-          {/* Display Lid Frame (Space Gray Aluminum) */}
-          <div className="rounded-t-[20px] sm:rounded-t-[24px] bg-[#05070c] p-2 sm:p-2.5 border-t border-x border-[#384354] shadow-[0_20px_50px_rgba(0,0,0,0.9)] relative">
-            {/* Screen Glass Highlight */}
-            <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+        <div
+          className="relative w-full max-w-[620px] sm:max-w-[680px] lg:max-w-[650px] xl:max-w-[700px] [transform-style:preserve-3d] transition-all duration-700 ease-out"
+          style={{ transform: "rotateY(10deg) rotateX(3deg)" }}
+        >
+          {/* Display Lid Frame (Space Gray Aluminum Chassis) */}
+          <div className="rounded-t-[20px] sm:rounded-t-[24px] bg-[#05070c] p-2 sm:p-2.5 border-t border-x border-[#3a4658] shadow-[0_30px_70px_rgba(0,0,0,0.95)] relative">
+            {/* Top Bezel Camera Dot (FaceTime HD) */}
+            <div className="absolute top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#0a111a] border border-white/10 flex items-center justify-center">
+              <span className="w-0.5 h-0.5 rounded-full bg-[#1b2b40]" />
+            </div>
 
-            {/* Screen Canvas (WorksAuto Web Genel Bakış 1:1) */}
+            {/* Screen Glass Reflection Highlight */}
+            <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+
+            {/* Screen Display Canvas (WorksAuto Web Genel Bakış 1:1) */}
             <div className="rounded-lg sm:rounded-xl bg-[#090f18] border border-[#1a2332] overflow-hidden flex flex-col font-sans">
-              {/* 1. Desktop Top Header (1:1 with panel.worksauto.com.tr) */}
+              {/* 1. Desktop Top Header (Exact 1:1 with Real Panel Header) */}
               <div className="relative px-3 py-1.5 bg-[#0b1019] border-b border-[#1a2332] flex items-center justify-between text-xs select-none">
-                {/* Left: Window Dots + WorksAuto Icon + Tenant Brand */}
+                {/* Left: WorksAuto Logo + Sidebar Collapse Button + BAYAR OTO SERVİS (No extra car logo) */}
                 <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
-                  </div>
-
-                  <div className="h-4 w-[1px] bg-[#1a2332] mx-0.5" />
-
-                  {/* WorksAuto White Tight Icon */}
+                  {/* WorksAuto White Tight Brand Icon */}
                   <div className="relative w-5 h-4 flex items-center justify-center">
                     <Image
                       src="/brand/worksauto-icon-white-tight.png"
@@ -66,8 +67,13 @@ export function ProductMockup() {
                     />
                   </div>
 
-                  {/* Tenant Brand: BAYAR OTO SERVİS */}
-                  <div className="hidden sm:block leading-tight text-left">
+                  {/* Collapse Sidebar Arrow Button */}
+                  <div className="w-4 h-4 rounded-full bg-[#111a26] border border-[#1f2d40] text-[#738094] flex items-center justify-center">
+                    <ChevronRight size={9} />
+                  </div>
+
+                  {/* Tenant Brand: BAYAR OTO SERVİS (Clean Typography, strictly no car logo) */}
+                  <div className="hidden sm:block leading-tight text-left ml-0.5">
                     <div className="text-[10px] font-black text-white tracking-wide font-heading">
                       BAYAR OTO SERVİS
                     </div>
@@ -77,15 +83,15 @@ export function ProductMockup() {
                   </div>
                 </div>
 
-                {/* Center: Search Bar (Exact 1:1) */}
-                <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#0e1624] border border-[#1a2332] text-[9px] text-[#9caac0] font-sans w-52 truncate">
+                {/* Center: Search Bar (Exact 1:1 Placeholder) */}
+                <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0e1624] border border-[#1a2332] text-[9px] text-[#9caac0] font-sans w-52 truncate">
                   <Search size={10} className="text-[#738094] shrink-0" />
                   <span className="truncate">Plaka, müşteri veya tel ara... (34 RB)</span>
                 </div>
 
-                {/* Right: + Hızlı Kabul, Notification, Theme, Workshop Dropdown, User */}
+                {/* Right: + Hızlı Kabul, Notification, Theme, Workshop Dropdown, User Profile */}
                 <div className="flex items-center gap-2">
-                  <div className="hidden sm:flex items-center gap-1 px-2 py-0.5 rounded-md bg-[#131d2c] border border-[#2357c5]/50 text-[9.5px] font-bold text-[#8fb4ff] shadow-xs">
+                  <div className="hidden sm:flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#131d2c] border border-[#2357c5]/50 text-[9px] font-bold text-[#8fb4ff] shadow-xs">
                     <Plus size={10} />
                     <span>Hızlı Kabul</span>
                   </div>
@@ -95,26 +101,31 @@ export function ProductMockup() {
                     <span className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-emerald-400" />
                   </div>
 
-                  <Moon size={11} className="text-[#738094] hidden sm:block" />
+                  <div className="hidden sm:flex items-center text-[#738094]">
+                    <Moon size={11} />
+                    <ChevronDown size={8} className="-ml-0.5" />
+                  </div>
 
                   {/* Tenant Dropdown */}
-                  <div className="hidden md:flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#0d1421] border border-[#1a2332] text-[8.5px] text-[#9caac0]">
+                  <div className="hidden md:flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#0d1421] border border-[#1a2332] text-[8.5px] text-[#9caac0]">
                     <Building2 size={10} className="text-[#738094]" />
-                    <span className="truncate max-w-[85px]">Bayar Oto</span>
+                    <span className="truncate max-w-[85px]">Bayar Oto Servis</span>
                     <ChevronDown size={8} />
                   </div>
 
-                  {/* User Profile Avatar */}
+                  <div className="hidden md:block h-3.5 w-[1px] bg-[#1a2332]" />
+
+                  {/* User Profile Avatar & Name */}
                   <div className="flex items-center gap-1.5">
                     <div className="w-5 h-5 rounded-full bg-[#1e2d42] border border-[#304460] flex items-center justify-center text-[7.5px] font-bold text-white font-mono">
                       RB
                     </div>
                     <div className="hidden lg:block leading-tight text-left">
-                      <div className="text-[8.5px] font-bold text-white truncate max-w-[80px]">
-                        Rıdvan Emre
+                      <div className="text-[8.5px] font-bold text-white truncate max-w-[90px]">
+                        Rıdvan Emre Bayar
                       </div>
                       <div className="text-[6.5px] text-[#738094] -mt-0.5">
-                        Yönetici
+                        Servis Yöneticisi
                       </div>
                     </div>
                   </div>
@@ -122,7 +133,7 @@ export function ProductMockup() {
               </div>
 
               {/* 2. Main Body: Sidebar + Workspace (1:1 with panel.worksauto.com.tr) */}
-              <div className="flex h-[335px] sm:h-[360px] overflow-hidden text-left">
+              <div className="flex h-[325px] sm:h-[350px] overflow-hidden text-left">
                 {/* Left Sidebar (Matching Real Panel Icons) */}
                 <div className="w-9 sm:w-10 bg-[#080d15] border-r border-[#1a2332] py-2 px-1 flex flex-col items-center justify-between shrink-0">
                   <div className="space-y-2 w-full flex flex-col items-center">
@@ -359,43 +370,114 @@ export function ProductMockup() {
           </div>
 
           {/* ======================================================== */}
-          {/* SEAMLESS MACBOOK PRO CHASSIS BASE (NO DETACHED SLABS)    */}
+          {/* 3D REALISTIC MACBOOK PRO KEYBOARD BASE DECK              */}
+          {/* Matches the open laptop perspective of reference image   */}
           {/* ======================================================== */}
-          {/* 1. Hinge Bar strictly attached to the lid */}
-          <div className="relative w-full h-[6px] bg-[#0c1017] border-x border-[#252f3e] flex items-center justify-center">
-            <div className="w-[82%] h-full bg-[#07090e] border-t border-black/80" />
+          <div className="relative w-[103%] -left-[1.5%] bg-gradient-to-b from-[#1c2432] via-[#141b25] to-[#0a0e15] rounded-b-2xl border-x border-b border-[#323d4e] shadow-[0_30px_60px_rgba(0,0,0,0.95)] pt-1 pb-3 px-3.5">
+            {/* Top Hinge Bar */}
+            <div className="w-[85%] h-1.5 bg-[#06080d] border-b border-white/5 mx-auto rounded-xs mb-1.5" />
+
+            {/* Keyboard Deck & Side Speakers Surface */}
+            <div className="flex items-start justify-between gap-2 px-1">
+              {/* Left Stereo Speaker Grille */}
+              <div className="w-5 sm:w-6 h-20 sm:h-22 rounded-xs opacity-50 bg-[radial-gradient(#3a4659_1px,transparent_1px)] [background-size:3px_3px] shrink-0" />
+
+              {/* Recessed Apple Chiclet Keyboard Well */}
+              <div className="flex-1 rounded-lg bg-[#07090e] border border-[#18212e] p-1.5 shadow-[inset_0_2px_8px_rgba(0,0,0,0.9)] space-y-1">
+                {/* Row 1: Function Row */}
+                <div className="grid grid-cols-12 gap-0.5 sm:gap-1">
+                  {Array.from({ length: 12 }).map((_, i) => (
+                    <div
+                      key={`fn-${i}`}
+                      className="h-2.5 sm:h-3 rounded-[2px] bg-[#111722] border-t border-white/10 shadow-xs"
+                    />
+                  ))}
+                </div>
+                {/* Row 2: Number Row */}
+                <div className="grid grid-cols-14 gap-0.5 sm:gap-1">
+                  {Array.from({ length: 14 }).map((_, i) => (
+                    <div
+                      key={`num-${i}`}
+                      className="h-3 sm:h-3.5 rounded-[2px] bg-[#121926] border-t border-white/15 shadow-xs"
+                    />
+                  ))}
+                </div>
+                {/* Row 3: QWERTY Row */}
+                <div className="grid grid-cols-14 gap-0.5 sm:gap-1">
+                  {Array.from({ length: 14 }).map((_, i) => (
+                    <div
+                      key={`qwerty-${i}`}
+                      className="h-3 sm:h-3.5 rounded-[2px] bg-[#121926] border-t border-white/15 shadow-xs"
+                    />
+                  ))}
+                </div>
+                {/* Row 4: ASDF Row */}
+                <div className="grid grid-cols-13 gap-0.5 sm:gap-1">
+                  {Array.from({ length: 13 }).map((_, i) => (
+                    <div
+                      key={`asdf-${i}`}
+                      className="h-3 sm:h-3.5 rounded-[2px] bg-[#121926] border-t border-white/15 shadow-xs"
+                    />
+                  ))}
+                </div>
+                {/* Row 5: Spacebar & Modifier Keys */}
+                <div className="flex items-center gap-1 pt-0.5">
+                  <div className="w-6 h-3 rounded-[2px] bg-[#121926] border-t border-white/15" />
+                  <div className="w-6 h-3 rounded-[2px] bg-[#121926] border-t border-white/15" />
+                  <div className="w-8 h-3 rounded-[2px] bg-[#121926] border-t border-white/15" />
+                  {/* Spacebar */}
+                  <div className="flex-1 h-3 rounded-[2px] bg-[#141b28] border-t border-white/20 shadow-xs" />
+                  <div className="w-8 h-3 rounded-[2px] bg-[#121926] border-t border-white/15" />
+                  <div className="w-6 h-3 rounded-[2px] bg-[#121926] border-t border-white/15" />
+                  {/* Arrow Keys */}
+                  <div className="w-7 h-3 rounded-[2px] bg-[#121926] border-t border-white/15" />
+                </div>
+              </div>
+
+              {/* Right Stereo Speaker Grille */}
+              <div className="w-5 sm:w-6 h-20 sm:h-22 rounded-xs opacity-50 bg-[radial-gradient(#3a4659_1px,transparent_1px)] [background-size:3px_3px] shrink-0" />
+            </div>
+
+            {/* Apple Force Touch Glass Trackpad */}
+            <div className="w-32 sm:w-40 h-10 sm:h-12 mx-auto rounded-lg bg-[#0e141f] border border-[#232d3d] mt-1.5 shadow-inner relative">
+              <div className="absolute top-0 inset-x-2 h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+            </div>
+
+            {/* Front Unibody Aluminum Lip with Precision Apple Thumb Scoop */}
+            <div className="w-20 sm:w-24 h-1.5 bg-[#06080d] rounded-b-md border-x border-b border-white/15 mx-auto shadow-inner mt-1" />
+
+            {/* Right-Side Aluminum Profile & Port Cutouts (Visible in 3D perspective) */}
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1.5 h-12 flex flex-col justify-center gap-1.5 pr-0.5">
+              <span className="w-1 h-2 rounded-full bg-[#05070a] border border-white/10" />
+              <span className="w-1 h-2 rounded-full bg-[#05070a] border border-white/10" />
+            </div>
           </div>
 
-          {/* 2. Apple Unibody Bottom Base with Center Thumb Scoop */}
-          <div className="relative w-[101.5%] -left-[0.75%] h-4 sm:h-5 bg-gradient-to-b from-[#263140] via-[#1a212c] to-[#0e131a] rounded-b-xl sm:rounded-b-2xl border-x border-b border-[#3d4b60] shadow-[0_20px_40px_rgba(0,0,0,0.9)] flex items-start justify-center">
-            {/* Top Chamfer Aluminum Reflection Line */}
-            <div className="absolute top-0 inset-x-2 h-[1px] bg-gradient-to-r from-transparent via-white/25 to-transparent" />
-
-            {/* Precision Center Apple Thumb Notch Scoop */}
-            <div className="w-18 sm:w-22 h-1.5 bg-[#07090e] rounded-b-md border-x border-b border-white/10 shadow-inner" />
-          </div>
-
-          {/* 3. Smooth Ambient Contact Shadow on Desk */}
-          <div className="w-[96%] mx-auto h-3 bg-black/90 blur-md rounded-full -mt-1" />
+          {/* Smooth Desktop Ambient Contact Shadow */}
+          <div className="w-[96%] mx-auto h-4 bg-black/95 blur-md rounded-full -mt-1.5" />
         </div>
 
         {/* ======================================================== */}
         {/* 2. REALISTIC SLENDER IPHONE 16 PRO (MOBILE PANEL 1:1)    */}
+        {/* Slightly overlapping the laptop base in 3D perspective   */}
         {/* ======================================================== */}
-        <div className="relative mt-8 sm:mt-0 sm:absolute sm:-bottom-4 sm:right-0 lg:-right-3 xl:-right-6 z-40 w-[240px] sm:w-[252px] mx-auto drop-shadow-[0_35px_80px_rgba(0,0,0,0.98)]">
+        <div
+          className="relative mt-8 sm:mt-0 sm:absolute sm:-bottom-4 sm:right-0 lg:-right-2 xl:-right-4 z-40 w-[242px] sm:w-[254px] mx-auto drop-shadow-[0_35px_80px_rgba(0,0,0,0.98)] [transform-style:preserve-3d] transition-all duration-700"
+          style={{ transform: "rotateY(-5deg) rotateX(2deg)" }}
+        >
           {/* Physical Side Buttons */}
           <div className="absolute -left-[3px] top-20 w-[3px] h-5 bg-[#3a4454] rounded-l-sm border-l border-white/20" />
           <div className="absolute -left-[3px] top-30 w-[3px] h-9 bg-[#3a4454] rounded-l-sm border-l border-white/20" />
           <div className="absolute -left-[3px] top-42 w-[3px] h-9 bg-[#3a4454] rounded-l-sm border-l border-white/20" />
           <div className="absolute -right-[3px] top-30 w-[3px] h-14 bg-[#3a4454] rounded-r-sm border-r border-white/20" />
 
-          {/* Natural Titanium Chassis */}
+          {/* Natural Titanium Chassis Frame */}
           <div className="rounded-[46px] p-2.5 bg-gradient-to-b from-[#3a4556] via-[#222a36] to-[#141a24] border-[2px] border-[#4a576c] ring-1 ring-white/10 shadow-2xl">
             {/* Display Glass (Slender 19.5:9 Apple Screen) */}
-            <div className="rounded-[38px] bg-[#070b12] border border-black overflow-hidden h-[515px] flex flex-col justify-between font-sans text-xs text-left shadow-inner">
+            <div className="rounded-[38px] bg-[#070b12] border border-black overflow-hidden h-[525px] flex flex-col justify-between font-sans text-xs text-left shadow-inner">
               {/* Top Section */}
-              <div className="p-3 space-y-2">
-                {/* 1. Apple Status Bar (9:41, Dynamic Island, 5G & Battery) */}
+              <div className="p-3 space-y-1.5">
+                {/* 1. Apple Status Bar (09:43, Dynamic Island, 5G & Battery) */}
                 <div className="flex items-center justify-between px-1 select-none text-[10px]">
                   <span className="font-bold text-white tracking-tight font-sans text-[11px]">
                     09:43
@@ -521,29 +603,52 @@ export function ProductMockup() {
                   </div>
                 </div>
 
-                {/* 6. Operasyon: Station Preview (Matching Screenshot 2) */}
+                {/* 6. Operasyon: 2 Station Boxes (Requested by User) */}
                 <div className="space-y-1 pt-0.5">
                   <div className="flex items-center justify-between text-[8px]">
                     <span className="font-bold text-white">Operasyon</span>
-                    <span className="text-[#738094] font-mono text-[7px]">İstasyon & Parça Takibi</span>
+                    <span className="text-[#738094] font-mono text-[7px]">İstasyon & Parça</span>
                   </div>
 
-                  <div className="p-2 rounded-xl bg-[#0c1421] border border-[#1f2d40] space-y-1">
-                    <div className="flex items-center justify-between text-[8.5px]">
-                      <div className="flex items-center gap-1 truncate">
-                        <span className="font-mono text-[#738094] font-bold text-[7px]">GENEL İSTASYON</span>
-                        <div className="inline-flex items-center h-3.5 rounded-xs border border-slate-700 bg-white text-slate-950 font-mono font-bold text-[7px] overflow-hidden shrink-0">
-                          <span className="bg-[#003399] text-white px-0.5 text-[5px] font-sans font-bold flex items-center h-full">TR</span>
-                          <span className="px-1">34 GKH 06</span>
+                  <div className="space-y-1">
+                    {/* Box 1: GENEL İSTASYON (Audi A6) */}
+                    <div className="p-1.5 rounded-lg bg-[#0c1421] border border-[#1f2d40] space-y-0.5">
+                      <div className="flex items-center justify-between text-[8px]">
+                        <div className="flex items-center gap-1 truncate">
+                          <span className="font-mono text-[#738094] font-bold text-[6.5px]">GENEL İSTASYON</span>
+                          <div className="inline-flex items-center h-3 rounded-xs border border-slate-700 bg-white text-slate-950 font-mono font-bold text-[6.5px] overflow-hidden shrink-0">
+                            <span className="bg-[#003399] text-white px-0.5 text-[4.5px] font-sans font-bold flex items-center h-full">TR</span>
+                            <span className="px-1">34 GKH 06</span>
+                          </div>
                         </div>
+                        <span className="inline-flex items-center gap-1 text-[6.5px] text-[#3b72ea] font-bold">
+                          <span className="w-1 h-1 rounded-full bg-[#3b72ea]" />
+                          İşlemde
+                        </span>
                       </div>
-                      <span className="inline-flex items-center gap-1 text-[7px] text-[#3b72ea] font-bold">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#3b72ea]" />
-                        İşlemde
-                      </span>
+                      <div className="text-[8px] font-bold text-white truncate">
+                        Audi A6 - 2026 • Periyodik Bakım
+                      </div>
                     </div>
-                    <div className="text-[8.5px] font-bold text-white truncate">
-                      Audi A6 - 2026 • Periyodik Bakım
+
+                    {/* Box 2: LİFT 1 (Porsche 911) */}
+                    <div className="p-1.5 rounded-lg bg-[#0c1421] border border-[#1f2d40] space-y-0.5">
+                      <div className="flex items-center justify-between text-[8px]">
+                        <div className="flex items-center gap-1 truncate">
+                          <span className="font-mono text-[#738094] font-bold text-[6.5px]">LİFT 1 (MEKANİK)</span>
+                          <div className="inline-flex items-center h-3 rounded-xs border border-slate-700 bg-white text-slate-950 font-mono font-bold text-[6.5px] overflow-hidden shrink-0">
+                            <span className="bg-[#003399] text-white px-0.5 text-[4.5px] font-sans font-bold flex items-center h-full">TR</span>
+                            <span className="px-1">34 RDV 5858</span>
+                          </div>
+                        </div>
+                        <span className="inline-flex items-center gap-1 text-[6.5px] text-emerald-400 font-bold">
+                          <span className="w-1 h-1 rounded-full bg-emerald-400" />
+                          Hazır
+                        </span>
+                      </div>
+                      <div className="text-[8px] font-bold text-white truncate">
+                        Porsche 911 - 2026 • Arıza Tespiti
+                      </div>
                     </div>
                   </div>
                 </div>
