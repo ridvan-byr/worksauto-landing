@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 
 export function SocialProof() {
   const metrics = [
@@ -10,141 +11,73 @@ export function SocialProof() {
     { value: "%99.98", label: "Bulut Çalışma Süresi" },
   ];
 
-  // Pure SVG Brand Marks
+  // 100% Official Vector & High-Res Brand Logos
   const BrandLogos = [
     {
       name: "BOSCH",
-      svg: (
-        <svg viewBox="0 0 160 36" className="h-6 sm:h-7 w-auto">
-          <circle cx="18" cy="18" r="14" fill="none" stroke="#EA0016" strokeWidth="3" />
-          <path d="M11 18h14M18 11v14" stroke="#EA0016" strokeWidth="3" strokeLinecap="round" />
-          <text x="44" y="24" fill="#FFFFFF" fontFamily="sans-serif" fontSize="20" fontWeight="900" letterSpacing="1">
-            BOSCH
-          </text>
-        </svg>
-      ),
+      src: "/logos/bosch.svg",
+      width: 140,
+      height: 32,
     },
     {
       name: "CASTROL",
-      svg: (
-        <svg viewBox="0 0 170 36" className="h-6 sm:h-7 w-auto">
-          <circle cx="18" cy="18" r="13" fill="none" stroke="#00C853" strokeWidth="3.5" />
-          <path d="M12 18a6 6 0 0 1 12 0" stroke="#FF3344" strokeWidth="3.5" fill="none" />
-          <text x="44" y="24" fill="#FFFFFF" fontFamily="sans-serif" fontSize="19" fontWeight="900" fontStyle="italic" letterSpacing="0.5">
-            Castrol
-          </text>
-        </svg>
-      ),
+      src: "/logos/castrol.svg",
+      width: 140,
+      height: 34,
     },
     {
       name: "BREMBO",
-      svg: (
-        <svg viewBox="0 0 170 36" className="h-6 sm:h-7 w-auto">
-          <circle cx="14" cy="18" r="9" fill="none" stroke="#FF2D37" strokeWidth="3" />
-          <circle cx="14" cy="18" r="4" fill="#FF2D37" />
-          <text x="36" y="24" fill="#FF2D37" fontFamily="sans-serif" fontSize="20" fontWeight="800" fontStyle="italic" letterSpacing="1">
-            brembo
-          </text>
-        </svg>
-      ),
+      src: "/logos/brembo.svg",
+      width: 130,
+      height: 30,
     },
     {
       name: "MOTUL",
-      svg: (
-        <svg viewBox="0 0 150 36" className="h-6 sm:h-7 w-auto">
-          <rect x="2" y="4" width="144" height="28" rx="6" fill="#ED1C24" />
-          <text x="74" y="24" textAnchor="middle" fill="#FFFFFF" fontFamily="sans-serif" fontSize="20" fontWeight="900" fontStyle="italic" letterSpacing="2">
-            MOTUL
-          </text>
-        </svg>
-      ),
-    },
-    {
-      name: "MAGNETI MARELLI",
-      svg: (
-        <svg viewBox="0 0 210 36" className="h-6 sm:h-7 w-auto">
-          <path d="M6 24V12l8 8 8-8v12" fill="none" stroke="#38BDF8" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
-          <text x="32" y="19" fill="#38BDF8" fontFamily="sans-serif" fontSize="13" fontWeight="900" letterSpacing="1">
-            MAGNETI
-          </text>
-          <text x="32" y="30" fill="#FACC15" fontFamily="sans-serif" fontSize="11" fontWeight="800" letterSpacing="1.5">
-            MARELLI
-          </text>
-        </svg>
-      ),
+      src: "/logos/motul.svg",
+      width: 125,
+      height: 34,
     },
     {
       name: "MOBIL 1",
-      svg: (
-        <svg viewBox="0 0 150 36" className="h-6 sm:h-7 w-auto">
-          <text x="6" y="25" fill="#38BDF8" fontFamily="sans-serif" fontSize="22" fontWeight="900" letterSpacing="1">
-            Mobil <tspan fill="#EF4444" fontSize="24" fontStyle="italic">1</tspan>
-          </text>
-        </svg>
-      ),
+      src: "/logos/mobil.svg",
+      width: 120,
+      height: 36,
     },
     {
       name: "LIQUI MOLY",
-      svg: (
-        <svg viewBox="0 0 190 36" className="h-6 sm:h-7 w-auto">
-          <rect x="6" y="7" width="22" height="22" rx="4" fill="#0284C7" />
-          <path d="M12 11v14h10" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-          <text x="36" y="19" fill="#38BDF8" fontFamily="sans-serif" fontSize="13" fontWeight="900" letterSpacing="1">
-            LIQUI
-          </text>
-          <text x="36" y="30" fill="#EF4444" fontFamily="sans-serif" fontSize="12" fontWeight="900" letterSpacing="1.5">
-            MOLY
-          </text>
-        </svg>
-      ),
+      src: "/logos/liqui_moly.svg",
+      width: 80,
+      height: 44,
     },
     {
-      name: "MANN FILTER",
-      svg: (
-        <svg viewBox="0 0 190 36" className="h-6 sm:h-7 w-auto">
-          <polygon points="6,27 16,9 26,27" fill="#10B981" />
-          <text x="36" y="19" fill="#FACC15" fontFamily="sans-serif" fontSize="14" fontWeight="900" letterSpacing="1">
-            MANN
-          </text>
-          <text x="36" y="29" fill="#34D399" fontFamily="sans-serif" fontSize="10" fontWeight="800" letterSpacing="2">
-            FILTER
-          </text>
-        </svg>
-      ),
+      name: "MANN+HUMMEL",
+      src: "/logos/mann_hummel.svg",
+      width: 130,
+      height: 36,
+    },
+    {
+      name: "MARELLI",
+      src: "/logos/marelli.svg",
+      width: 100,
+      height: 40,
     },
     {
       name: "PARAŞÜT",
-      svg: (
-        <svg viewBox="0 0 170 36" className="h-6 sm:h-7 w-auto">
-          <path d="M16 8c-6 0-10 4-10 9s10 11 10 11 10-6 10-11-4-9-10-9z" fill="none" stroke="#14B8A6" strokeWidth="2.5" />
-          <circle cx="16" cy="17" r="3" fill="#14B8A6" />
-          <text x="36" y="24" fill="#14B8A6" fontFamily="sans-serif" fontSize="19" fontWeight="800" letterSpacing="0.5">
-            paraşüt
-          </text>
-        </svg>
-      ),
+      src: "/logos/parasut.png",
+      width: 125,
+      height: 32,
     },
     {
       name: "NILVERA",
-      svg: (
-        <svg viewBox="0 0 160 36" className="h-6 sm:h-7 w-auto">
-          <circle cx="16" cy="18" r="10" fill="none" stroke="#A855F7" strokeWidth="2.5" />
-          <path d="M12 22l8-8" stroke="#A855F7" strokeWidth="2.5" strokeLinecap="round" />
-          <text x="36" y="24" fill="#C084FC" fontFamily="sans-serif" fontSize="18" fontWeight="800" letterSpacing="1">
-            nilvera
-          </text>
-        </svg>
-      ),
+      src: "/logos/nilvera.svg",
+      width: 120,
+      height: 34,
     },
     {
       name: "PAYTR",
-      svg: (
-        <svg viewBox="0 0 150 36" className="h-6 sm:h-7 w-auto">
-          <text x="6" y="25" fill="#38BDF8" fontFamily="sans-serif" fontSize="22" fontWeight="900" fontStyle="italic" letterSpacing="1">
-            Pay<tspan fill="#F97316" fontWeight="800">TR</tspan>
-          </text>
-        </svg>
-      ),
+      src: "/logos/paytr.png",
+      width: 125,
+      height: 28,
     },
   ];
 
@@ -174,16 +107,23 @@ export function SocialProof() {
             TÜRKİYE'DEKİ ÖZEL ATÖLYELER VE ZİNCİR SERVİS STANDARTLARIYLA TAM ENTEGRE
           </p>
 
-          {/* Infinite Marquee of Pure Monochrome Vector Brand Logos */}
+          {/* Infinite Marquee of Pure Official Brand Logos with Mathematical Equal Spacing */}
           <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
-            <div className="animate-marquee py-4 flex items-center gap-16 sm:gap-20">
+            <div className="animate-marquee py-4 flex items-center gap-8 sm:gap-10">
               {marqueeItems.map((item, idx) => (
                 <div
                   key={idx}
-                  className="shrink-0 transition-all duration-300 cursor-pointer flex items-center justify-center opacity-85 hover:opacity-100 transform hover:scale-105"
+                  className="w-32 sm:w-36 h-12 flex items-center justify-center shrink-0 transition-all duration-300 cursor-pointer opacity-90 hover:opacity-100 transform hover:scale-105"
                   title={item.name}
                 >
-                  {item.svg}
+                  <Image
+                    src={item.src}
+                    alt={item.name}
+                    width={item.width}
+                    height={item.height}
+                    className="max-h-7 max-w-[115px] w-auto h-auto object-contain select-none"
+                    draggable={false}
+                  />
                 </div>
               ))}
             </div>
