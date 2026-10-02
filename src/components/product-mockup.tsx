@@ -37,7 +37,7 @@ export function ProductMockup() {
         {/* 1. CINEMATIC 3D MACBOOK PRO WITH SPACIOUS 1:1 DASHBOARD  */}
         {/* ======================================================== */}
         <div
-          className="relative w-full max-w-[660px] sm:max-w-[740px] lg:max-w-[720px] xl:max-w-[780px] [transform-style:preserve-3d] transition-all duration-700 ease-out"
+          className="relative w-full max-w-[650px] sm:max-w-[720px] lg:max-w-[700px] xl:max-w-[760px] [transform-style:preserve-3d] transition-all duration-700 ease-out"
           style={{ transform: "rotateY(7deg) rotateX(2deg)" }}
         >
           {/* Display Lid Frame (Space Gray Aluminum Chassis) */}
@@ -56,21 +56,21 @@ export function ProductMockup() {
               {/* LEFT COLUMN: Sidebar runs from VERY TOP (Logo) to BOTTOM (Settings) */}
               {/* ================================================================= */}
               <div className="relative w-11 sm:w-12 bg-[#080d15] border-r border-[#1a2332] flex flex-col justify-between shrink-0 select-none">
-                {/* Top: WorksAuto Brand Icon + ( > ) Toggle sitting EXACTLY ON THE BORDER LINE */}
-                <div className="relative h-12 border-b border-[#1a2332] flex items-center justify-center">
-                  <div className="relative w-6 h-4 flex items-center justify-center">
+                {/* Top: WorksAuto Brand Icon (Directly centered above navigation icons) */}
+                <div className="relative h-11 border-b border-[#1a2332] flex items-center justify-center">
+                  <div className="relative w-5 h-4 flex items-center justify-center">
                     <Image
                       src="/brand/worksauto-icon-white-tight.png"
                       alt="WorksAuto"
-                      width={24}
-                      height={16}
+                      width={22}
+                      height={15}
                       className="h-3.5 w-auto object-contain"
                     />
                   </div>
 
-                  {/* Sidebar Toggle ( > ) Sitting EXACTLY ON THE VERTICAL BORDER LINE */}
-                  <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#0e1624] border border-[#233348] text-[#8fb4ff] flex items-center justify-center shadow-md z-30 cursor-pointer hover:bg-[#162438]">
-                    <ChevronRight size={9} />
+                  {/* Sidebar Toggle ( > ) Sitting EXACTLY CENTERED ON THE VERTICAL BORDER LINE */}
+                  <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#0d1522] border border-[#233348] text-[#8fb4ff] flex items-center justify-center shadow-md z-30 cursor-pointer hover:bg-[#162438]">
+                    <ChevronRight size={8} />
                   </div>
                 </div>
 
@@ -78,110 +78,110 @@ export function ProductMockup() {
                 <div className="py-2.5 px-1 space-y-2 flex flex-col items-center">
                   {/* Active: Genel Bakış */}
                   <div className="w-7 h-7 rounded-lg bg-[#2357c5] text-white flex items-center justify-center shadow-xs">
-                    <LayoutDashboard size={14} />
+                    <LayoutDashboard size={13} />
                   </div>
                   {/* İş Emirleri */}
                   <div className="w-7 h-7 rounded-lg text-[#738094] flex items-center justify-center relative hover:text-white">
-                    <Wrench size={14} />
+                    <Wrench size={13} />
                     <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-[#3b72ea]" />
                   </div>
                   {/* Randevular */}
                   <div className="w-7 h-7 rounded-lg text-[#738094] flex items-center justify-center hover:text-white">
-                    <Calendar size={14} />
+                    <Calendar size={13} />
                   </div>
                   {/* Müşteriler */}
                   <div className="w-7 h-7 rounded-lg text-[#738094] flex items-center justify-center hover:text-white">
-                    <Users size={14} />
+                    <Users size={13} />
                   </div>
                   {/* Kazanç */}
                   <div className="w-7 h-7 rounded-lg text-[#738094] flex items-center justify-center hover:text-white">
-                    <TrendingUp size={14} />
+                    <TrendingUp size={13} />
                   </div>
                   {/* Stok */}
                   <div className="w-7 h-7 rounded-lg text-[#738094] flex items-center justify-center hover:text-white">
-                    <Package size={14} />
+                    <Package size={13} />
                   </div>
                   {/* Faturalar */}
                   <div className="w-7 h-7 rounded-lg text-[#738094] flex items-center justify-center hover:text-white">
-                    <Receipt size={14} />
+                    <Receipt size={13} />
                   </div>
                   {/* Cariler */}
                   <div className="w-7 h-7 rounded-lg text-[#738094] flex items-center justify-center hover:text-white">
-                    <CreditCard size={14} />
+                    <CreditCard size={13} />
                   </div>
                 </div>
 
                 {/* Bottom: Settings Cog */}
                 <div className="py-2.5 px-1 flex items-center justify-center">
                   <div className="w-7 h-7 rounded-lg text-[#738094] flex items-center justify-center hover:text-white">
-                    <Settings size={14} />
+                    <Settings size={13} />
                   </div>
                 </div>
               </div>
 
               {/* ================================================================= */}
-              {/* RIGHT COLUMN: Spacious Header + Dashboard Content                  */}
+              {/* RIGHT COLUMN: Perfectly Balanced Header + Workspace                */}
               {/* ================================================================= */}
               <div className="flex-1 flex flex-col overflow-hidden text-left min-w-0">
-                {/* 1. Header (Spacious, Breathable, 1:1 with user's screenshot) */}
-                <div className="h-12 pl-4 pr-3 bg-[#0b1019] border-b border-[#1a2332] flex items-center justify-between text-xs select-none">
+                {/* 1. Header (Balanced proportions, no squeezing, no overflow) */}
+                <div className="h-11 pl-3.5 pr-2.5 bg-[#0b1019] border-b border-[#1a2332] flex items-center justify-between text-xs select-none gap-2">
                   {/* Tenant Brand: BAYAR OTO SERVİS (Clean typography, strictly no extra car logo) */}
                   <div className="leading-tight text-left shrink-0">
-                    <div className="text-[11px] font-black text-white tracking-wide font-heading">
+                    <div className="text-[10px] font-black text-white tracking-wide font-heading">
                       BAYAR OTO SERVİS
                     </div>
-                    <div className="text-[8px] text-[#738094] -mt-0.5">
+                    <div className="text-[7px] text-[#738094] -mt-0.5">
                       İstanbul / Başakşehir
                     </div>
                   </div>
 
-                  {/* Center: Search Bar (Spacious rounded container) */}
-                  <div className="hidden sm:flex items-center gap-2 h-8 px-3.5 rounded-lg bg-[#0e1624] border border-[#1a2332] text-[9.5px] text-[#9caac0] font-sans w-52 lg:w-60 truncate mx-2">
-                    <Search size={11} className="text-[#738094] shrink-0" />
-                    <span className="truncate">Plaka, müşteri veya tel ara... (34 RB)</span>
+                  {/* Center: Search Bar (Guaranteed minimum width, never shrinks to a square) */}
+                  <div className="flex-1 min-w-[130px] max-w-[200px] h-7 px-2.5 rounded-lg bg-[#0e1624] border border-[#1a2332] text-[8px] text-[#9caac0] font-sans flex items-center gap-1.5 shrink-0">
+                    <Search size={10} className="text-[#738094] shrink-0" />
+                    <span className="truncate">Plaka, müşteri veya tel ara...</span>
                   </div>
 
-                  {/* Right Header Controls (Comfortable spacing, no crowding) */}
-                  <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
-                    {/* + Hızlı Kabul (Comfortable horizontal rounded-lg button, single line) */}
-                    <div className="hidden sm:flex items-center gap-1.5 h-8 px-3 rounded-lg bg-[#111c2c] border border-[#2357c5]/60 text-[9.5px] font-bold text-white shadow-xs cursor-pointer hover:bg-[#16253b]">
-                      <Plus size={11} className="text-[#8fb4ff]" />
+                  {/* Right Header Controls (Compact desktop proportions, fits without clipping) */}
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    {/* + Hızlı Kabul (Single-line horizontal rounded-lg button) */}
+                    <div className="flex items-center gap-1 h-7 px-2 sm:px-2.5 rounded-lg bg-[#111c2c] border border-[#2357c5]/50 text-[8.5px] font-bold text-white shadow-xs cursor-pointer hover:bg-[#16253b] shrink-0">
+                      <Plus size={10} className="text-[#8fb4ff]" />
                       <span className="whitespace-nowrap">Hızlı Kabul</span>
                     </div>
 
                     {/* Notification Bell */}
-                    <div className="relative text-[#9caac0] p-1.5 cursor-pointer hover:text-white">
-                      <Bell size={13} />
-                      <span className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    <div className="relative text-[#9caac0] p-1 cursor-pointer hover:text-white shrink-0">
+                      <Bell size={11} />
+                      <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-emerald-400" />
                     </div>
 
-                    {/* Theme Toggle Button in Box [ 🌙 ⌵ ] (Has background, border, matching real panel) */}
-                    <div className="hidden sm:flex items-center gap-1 h-8 px-2.5 rounded-lg bg-[#0e1624] border border-[#1a2332] text-[#9caac0] cursor-pointer hover:border-slate-700">
-                      <Moon size={12} />
-                      <ChevronDown size={8} className="text-[#738094]" />
+                    {/* Theme Toggle Button in Box [ 🌙 ⌵ ] */}
+                    <div className="flex items-center gap-0.5 h-7 px-1.5 rounded-lg bg-[#0e1624] border border-[#1a2332] text-[#9caac0] cursor-pointer hover:border-slate-700 shrink-0">
+                      <Moon size={10} />
+                      <ChevronDown size={7} className="text-[#738094]" />
                     </div>
 
-                    {/* Workshop Dropdown [ 🏢 Bayar Oto Servis ⌵ ] */}
-                    <div className="hidden md:flex items-center gap-1.5 h-8 px-3 rounded-lg bg-[#0e1624] border border-[#1a2332] text-[9px] text-[#9caac0] cursor-pointer hover:border-slate-700">
-                      <Building2 size={11} className="text-[#738094]" />
-                      <span className="truncate max-w-[95px]">Bayar Oto Servis</span>
-                      <ChevronDown size={8} className="text-[#738094]" />
+                    {/* Workshop Dropdown [ 🏢 Bayar Oto ⌵ ] */}
+                    <div className="flex items-center gap-1 h-7 px-2 rounded-lg bg-[#0e1624] border border-[#1a2332] text-[8px] text-[#9caac0] cursor-pointer hover:border-slate-700 shrink-0">
+                      <Building2 size={9} className="text-[#738094]" />
+                      <span className="truncate max-w-[60px] sm:max-w-[75px]">Bayar Oto</span>
+                      <ChevronDown size={7} className="text-[#738094]" />
                     </div>
 
                     {/* Divider */}
-                    <div className="hidden md:block h-4 w-[1px] bg-[#1a2332] mx-0.5" />
+                    <div className="h-3.5 w-[1px] bg-[#1a2332] shrink-0" />
 
                     {/* User Profile Avatar & Name */}
-                    <div className="flex items-center gap-2 cursor-pointer">
-                      <div className="w-6 h-6 rounded-full bg-[#1e2d42] border border-[#304460] flex items-center justify-center text-[8px] font-bold text-white font-mono">
+                    <div className="flex items-center gap-1.5 cursor-pointer shrink-0">
+                      <div className="w-5 h-5 rounded-full bg-[#1e2d42] border border-[#304460] flex items-center justify-center text-[7.5px] font-bold text-white font-mono">
                         RB
                       </div>
                       <div className="hidden lg:block leading-tight text-left">
-                        <div className="text-[9.5px] font-bold text-white truncate max-w-[95px]">
-                          Rıdvan Emre Bayar
+                        <div className="text-[8.5px] font-bold text-white truncate max-w-[80px]">
+                          Rıdvan Emre B.
                         </div>
-                        <div className="text-[7px] text-[#738094] -mt-0.5">
-                          Servis Yöneticisi
+                        <div className="text-[6.5px] text-[#738094] -mt-0.5">
+                          Yönetici
                         </div>
                       </div>
                     </div>
@@ -189,35 +189,35 @@ export function ProductMockup() {
                 </div>
 
                 {/* 2. Workspace Body (Spacious & Breathable) */}
-                <div className="p-3 sm:p-4 overflow-hidden flex flex-col justify-between space-y-2.5 h-[340px] sm:h-[370px]">
+                <div className="p-3 sm:p-3.5 overflow-hidden flex flex-col justify-between space-y-2 h-[335px] sm:h-[360px]">
                   {/* Greeting & Header Telemetry */}
                   <div className="space-y-0.5">
-                    <div className="text-[8px] font-extrabold uppercase tracking-widest text-[#8fb4ff] font-mono">
+                    <div className="text-[7.5px] font-extrabold uppercase tracking-widest text-[#8fb4ff] font-mono">
                       2 EKİM 2026 CUMA · AKŞAM VARDİYASI
                     </div>
 
                     {/* "İyi akşamlar, Rıdvan" and the Action Buttons on the EXACT SAME HORIZONTAL ROW */}
                     <div className="flex items-center justify-between pt-0.5">
                       <div>
-                        <h3 className="font-heading font-black text-sm sm:text-base text-white tracking-tight">
+                        <h3 className="font-heading font-black text-xs sm:text-sm text-white tracking-tight">
                           İyi akşamlar, Rıdvan
                         </h3>
-                        <p className="text-[8px] sm:text-[8.5px] text-[#738094] mt-0.5 truncate max-w-[280px] sm:max-w-[380px]">
+                        <p className="text-[7.5px] sm:text-[8px] text-[#738094] mt-0.5 truncate max-w-[240px] sm:max-w-[340px]">
                           Lifter şu an müsait, sırada işleme alınmayı bekleyen 1 araç bulunuyor.
                         </p>
                       </div>
 
                       {/* Quick Action Buttons (Exact vertical alignment with "İyi akşamlar, Rıdvan") */}
-                      <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                        <div className="px-2.5 py-1.5 rounded-lg bg-[#0f1725] border border-[#1a2332] text-[8.5px] font-bold text-[#8fb4ff] flex items-center gap-1.5 shadow-xs cursor-pointer hover:bg-[#141f32]">
-                          <TrendingUp size={10} />
+                      <div className="flex items-center gap-1.5 shrink-0">
+                        <div className="px-2 py-1 rounded-md bg-[#0f1725] border border-[#1a2332] text-[8px] font-bold text-[#8fb4ff] flex items-center gap-1 shadow-xs cursor-pointer hover:bg-[#141f32]">
+                          <TrendingUp size={9} />
                           <span>Kazanç</span>
                         </div>
-                        <div className="px-2.5 py-1.5 rounded-lg bg-[#0f1725] border border-[#1a2332] text-[8.5px] font-bold text-white shadow-xs cursor-pointer hover:bg-[#141f32]">
+                        <div className="px-2 py-1 rounded-md bg-[#0f1725] border border-[#1a2332] text-[8px] font-bold text-white shadow-xs cursor-pointer hover:bg-[#141f32]">
                           Randevular
                         </div>
-                        <div className="px-2.5 py-1.5 rounded-lg bg-[#2357c5] text-[8.5px] font-bold text-white flex items-center gap-1 shadow-xs cursor-pointer hover:bg-[#1d4bb0]">
-                          <Plus size={11} />
+                        <div className="px-2 py-1 rounded-md bg-[#2357c5] text-[8px] font-bold text-white flex items-center gap-1 shadow-xs cursor-pointer hover:bg-[#1d4bb0]">
+                          <Plus size={10} />
                           <span>Kabul</span>
                         </div>
                       </div>
@@ -226,66 +226,66 @@ export function ProductMockup() {
 
                   {/* Section 1: Günlük Özet (4 Authentic KPI Cards) */}
                   <div className="space-y-1">
-                    <div className="flex items-center justify-between text-[8.5px]">
+                    <div className="flex items-center justify-between text-[8px]">
                       <span className="font-bold text-white">Günlük Özet</span>
-                      <span className="text-[#738094] font-mono text-[8px]">Atölye Telemetrisi</span>
+                      <span className="text-[#738094] font-mono text-[7.5px]">Atölye Telemetrisi</span>
                     </div>
 
-                    <div className="grid grid-cols-4 gap-2">
+                    <div className="grid grid-cols-4 gap-1.5">
                       {/* Metric 1: Bugünkü Tahsilat */}
-                      <div className="p-2.5 rounded-xl bg-[#0c1320] border border-[#1a2332]">
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-[#0c1320] border border-[#1a2332]">
                         <div className="flex items-center justify-between text-[#738094]">
-                          <span className="text-[8px] font-bold uppercase tracking-wider truncate">Bugünkü Tahsilat</span>
-                          <div className="w-5 h-5 rounded-md bg-[#131d2c] flex items-center justify-center text-[#8fb4ff]">
-                            <TrendingUp size={10} />
+                          <span className="text-[7.5px] font-bold uppercase tracking-wider truncate">Bugünkü Tahsilat</span>
+                          <div className="w-4 h-4 rounded-md bg-[#131d2c] flex items-center justify-center text-[#8fb4ff]">
+                            <TrendingUp size={9} />
                           </div>
                         </div>
-                        <div className="font-heading font-black text-sm sm:text-base text-white font-mono mt-0.5">
+                        <div className="font-heading font-black text-xs sm:text-[13px] text-white font-mono mt-0.5">
                           ₺0
                         </div>
-                        <div className="text-[7.5px] text-[#738094] mt-0.5 truncate">Bu ay: ₺0</div>
+                        <div className="text-[7px] text-[#738094] mt-0.5 truncate">Bu ay: ₺0</div>
                       </div>
 
                       {/* Metric 2: Aktif İş Emirleri */}
-                      <div className="p-2.5 rounded-xl bg-[#0c1320] border border-[#1a2332]">
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-[#0c1320] border border-[#1a2332]">
                         <div className="flex items-center justify-between text-[#738094]">
-                          <span className="text-[8px] font-bold uppercase tracking-wider truncate">Aktif İş Emirleri</span>
-                          <div className="w-5 h-5 rounded-md bg-[#131d2c] flex items-center justify-center text-emerald-400">
-                            <Wrench size={10} />
+                          <span className="text-[7.5px] font-bold uppercase tracking-wider truncate">Aktif İş Emirleri</span>
+                          <div className="w-4 h-4 rounded-md bg-[#131d2c] flex items-center justify-center text-emerald-400">
+                            <Wrench size={9} />
                           </div>
                         </div>
-                        <div className="font-heading font-black text-sm sm:text-base text-emerald-400 font-mono mt-0.5">
+                        <div className="font-heading font-black text-xs sm:text-[13px] text-emerald-400 font-mono mt-0.5">
                           1
                         </div>
-                        <div className="text-[7.5px] text-[#738094] mt-0.5 truncate">0 liftte · 1 sırada</div>
+                        <div className="text-[7px] text-[#738094] mt-0.5 truncate">0 liftte · 1 sırada</div>
                       </div>
 
                       {/* Metric 3: Atölye Doluluğu */}
-                      <div className="p-2.5 rounded-xl bg-[#0c1320] border border-[#1a2332]">
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-[#0c1320] border border-[#1a2332]">
                         <div className="flex items-center justify-between text-[#738094]">
-                          <span className="text-[8px] font-bold uppercase tracking-wider truncate">Atölye Doluluğu</span>
-                          <div className="w-5 h-5 rounded-md bg-[#131d2c] flex items-center justify-center text-amber-400">
-                            <Layers size={10} />
+                          <span className="text-[7.5px] font-bold uppercase tracking-wider truncate">Atölye Doluluğu</span>
+                          <div className="w-4 h-4 rounded-md bg-[#131d2c] flex items-center justify-center text-amber-400">
+                            <Layers size={9} />
                           </div>
                         </div>
-                        <div className="font-heading font-black text-sm sm:text-base text-white font-mono mt-0.5">
+                        <div className="font-heading font-black text-xs sm:text-[13px] text-white font-mono mt-0.5">
                           %0
                         </div>
-                        <div className="text-[7.5px] text-[#738094] mt-0.5 truncate">3 istasyonun 0'ı aktif</div>
+                        <div className="text-[7px] text-[#738094] mt-0.5 truncate">3 istasyonun 0'ı aktif</div>
                       </div>
 
                       {/* Metric 4: Bekleyen Tahsilat */}
-                      <div className="p-2.5 rounded-xl bg-[#0c1320] border border-[#1a2332]">
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-[#0c1320] border border-[#1a2332]">
                         <div className="flex items-center justify-between text-[#738094]">
-                          <span className="text-[8px] font-bold uppercase tracking-wider truncate">Bekleyen Tahsilat</span>
-                          <div className="w-5 h-5 rounded-md bg-[#131d2c] flex items-center justify-center text-[#8fb4ff]">
-                            <Receipt size={10} />
+                          <span className="text-[7.5px] font-bold uppercase tracking-wider truncate">Bekleyen Tahsilat</span>
+                          <div className="w-4 h-4 rounded-md bg-[#131d2c] flex items-center justify-center text-[#8fb4ff]">
+                            <Receipt size={9} />
                           </div>
                         </div>
-                        <div className="font-heading font-black text-sm sm:text-base text-white font-mono mt-0.5">
+                        <div className="font-heading font-black text-xs sm:text-[13px] text-white font-mono mt-0.5">
                           ₺0
                         </div>
-                        <div className="flex items-center justify-between text-[7.5px] mt-0.5">
+                        <div className="flex items-center justify-between text-[7px] mt-0.5">
                           <span className="text-[#738094] truncate">Tüm cariler güncel</span>
                           <span className="text-[#8fb4ff] font-bold shrink-0">Radara Git →</span>
                         </div>
@@ -295,63 +295,63 @@ export function ProductMockup() {
 
                   {/* Section 2: Operasyon (Exact 1:1 Atölye ve Liftler + Stok Durumu) */}
                   <div className="space-y-1 pt-0.5">
-                    <div className="flex items-center justify-between text-[9.5px]">
+                    <div className="flex items-center justify-between text-[9px]">
                       <span className="font-heading font-extrabold text-white">Operasyon</span>
-                      <span className="text-[8.5px] text-[#738094] font-mono">İstasyon & Parça Takibi</span>
+                      <span className="text-[8px] text-[#738094] font-mono">İstasyon & Parça Takibi</span>
                     </div>
 
-                    <div className="grid grid-cols-12 gap-2.5">
+                    <div className="grid grid-cols-12 gap-2">
                       {/* Left Column: Atölye ve Liftler (Matching Screenshot 1) */}
-                      <div className="col-span-8 p-2.5 rounded-xl bg-[#0a101a] border border-[#1a2332] space-y-1.5">
-                        <div className="flex items-center justify-between text-[9px]">
+                      <div className="col-span-8 p-2 rounded-xl bg-[#0a101a] border border-[#1a2332] space-y-1.5">
+                        <div className="flex items-center justify-between text-[8.5px]">
                           <div>
                             <span className="font-bold text-white">Atölye ve Liftler</span>
-                            <div className="text-[7.5px] text-[#738094]">Şu anda işlem gören araçlar ve istasyon durumları</div>
+                            <div className="text-[7px] text-[#738094]">Şu anda işlem gören araçlar ve istasyon durumları</div>
                           </div>
                           <span className="text-[#8fb4ff] flex items-center gap-0.5 font-bold shrink-0">
                             <span>Panoya Git</span>
-                            <ArrowUpRight size={10} />
+                            <ArrowUpRight size={9} />
                           </span>
                         </div>
 
                         <div className="space-y-1">
                           {/* Station 1: Genel İstasyon (Audi A6) */}
-                          <div className="p-1.5 rounded-lg bg-[#0d1421] border border-[#1f2d40] text-[8.5px] space-y-0.5">
+                          <div className="p-1.5 rounded-lg bg-[#0d1421] border border-[#1f2d40] text-[8px] space-y-0.5">
                             <div className="flex items-center justify-between">
                               <div className="flex items-center gap-1.5 truncate">
-                                <span className="text-[7.5px] text-[#738094] font-mono font-bold">GENEL İSTASYON</span>
-                                <div className="inline-flex items-center h-4 rounded-xs border border-slate-700 bg-white text-slate-950 font-mono font-bold text-[7.5px] overflow-hidden shrink-0">
-                                  <span className="bg-[#003399] text-white px-0.5 text-[5.5px] font-sans font-bold flex items-center h-full">TR</span>
+                                <span className="text-[7px] text-[#738094] font-mono font-bold">GENEL İSTASYON</span>
+                                <div className="inline-flex items-center h-3.5 rounded-xs border border-slate-700 bg-white text-slate-950 font-mono font-bold text-[7px] overflow-hidden shrink-0">
+                                  <span className="bg-[#003399] text-white px-0.5 text-[5px] font-sans font-bold flex items-center h-full">TR</span>
                                   <span className="px-1">34 GKH 06</span>
                                 </div>
                               </div>
-                              <span className="inline-flex items-center gap-1 text-[7.5px] text-[#3b72ea] font-bold">
+                              <span className="inline-flex items-center gap-1 text-[7px] text-[#3b72ea] font-bold">
                                 <span className="w-1.5 h-1.5 rounded-full bg-[#3b72ea] animate-pulse" />
                                 İşlemde
                               </span>
                             </div>
-                            <div className="flex items-center justify-between text-[8px]">
+                            <div className="flex items-center justify-between text-[7.5px]">
                               <span className="text-white font-bold truncate">Audi A6 - 2026 • Periyodik Bakım (Yağ + 4 Filtre)</span>
                               <span className="text-[#738094] shrink-0">İşlem Sürüyor</span>
                             </div>
                           </div>
 
                           {/* Station 2: Lift 1 (Porsche 911) */}
-                          <div className="p-1.5 rounded-lg bg-[#0d1421] border border-[#1f2d40] text-[8.5px] space-y-0.5">
+                          <div className="p-1.5 rounded-lg bg-[#0d1421] border border-[#1f2d40] text-[8px] space-y-0.5">
                             <div className="flex items-center justify-between">
                               <div className="flex items-center gap-1.5 truncate">
-                                <span className="text-[7.5px] text-[#738094] font-mono font-bold">LİFT 1 (GENEL MEKANİK)</span>
-                                <div className="inline-flex items-center h-4 rounded-xs border border-slate-700 bg-white text-slate-950 font-mono font-bold text-[7.5px] overflow-hidden shrink-0">
-                                  <span className="bg-[#003399] text-white px-0.5 text-[5.5px] font-sans font-bold flex items-center h-full">TR</span>
+                                <span className="text-[7px] text-[#738094] font-mono font-bold">LİFT 1 (GENEL MEKANİK)</span>
+                                <div className="inline-flex items-center h-3.5 rounded-xs border border-slate-700 bg-white text-slate-950 font-mono font-bold text-[7px] overflow-hidden shrink-0">
+                                  <span className="bg-[#003399] text-white px-0.5 text-[5px] font-sans font-bold flex items-center h-full">TR</span>
                                   <span className="px-1">34 RDV 5858</span>
                                 </div>
                               </div>
-                              <span className="inline-flex items-center gap-1 text-[7.5px] text-emerald-400 font-bold">
+                              <span className="inline-flex items-center gap-1 text-[7px] text-emerald-400 font-bold">
                                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                                 Teslime Hazır
                               </span>
                             </div>
-                            <div className="flex items-center justify-between text-[8px]">
+                            <div className="flex items-center justify-between text-[7.5px]">
                               <span className="text-white font-bold truncate">Porsche 911 - 2026 • Hızlı Arıza Tespiti & Kontrol</span>
                               <span className="text-emerald-400 font-mono shrink-0">Tamamlandı</span>
                             </div>
@@ -360,18 +360,18 @@ export function ProductMockup() {
                       </div>
 
                       {/* Right Column: Stokta Dikkat İsteyenler (Exact 1:1 Checkmark) */}
-                      <div className="col-span-4 p-2.5 rounded-xl bg-[#0a101a] border border-[#1a2332] flex flex-col justify-between text-[8.5px]">
-                        <div className="flex items-center justify-between text-[9px]">
+                      <div className="col-span-4 p-2 rounded-xl bg-[#0a101a] border border-[#1a2332] flex flex-col justify-between text-[8px]">
+                        <div className="flex items-center justify-between text-[8.5px]">
                           <div>
                             <span className="font-bold text-white truncate">Stok</span>
-                            <div className="text-[7.5px] text-[#738094] truncate">Minimum seviye</div>
+                            <div className="text-[7px] text-[#738094] truncate">Minimum seviye</div>
                           </div>
                           <span className="text-[#8fb4ff] font-bold">Stok ↗</span>
                         </div>
 
-                        <div className="py-3 text-center flex flex-col items-center justify-center text-emerald-400">
-                          <CheckCircle2 size={20} className="text-emerald-400 mb-1" />
-                          <span className="text-[8px] text-[#9caac0] font-medium leading-tight">
+                        <div className="py-2.5 text-center flex flex-col items-center justify-center text-emerald-400">
+                          <CheckCircle2 size={18} className="text-emerald-400 mb-1" />
+                          <span className="text-[7.5px] text-[#9caac0] font-medium leading-tight">
                             Kritik seviyede parça bulunmuyor
                           </span>
                         </div>
@@ -397,7 +397,7 @@ export function ProductMockup() {
               <div className="w-5 sm:w-6 h-20 sm:h-22 rounded-xs opacity-50 bg-[radial-gradient(#3a4659_1px,transparent_1px)] [background-size:3px_3px] shrink-0" />
 
               {/* Centered Recessed Apple Chiclet Keyboard Well */}
-              <div className="flex-1 rounded-lg bg-[#07090e] border border-[#18212e] p-1.5 shadow-[inset_0_2px_8px_rgba(0,0,0,0.9)] space-y-1 max-w-[520px]">
+              <div className="flex-1 rounded-lg bg-[#07090e] border border-[#18212e] p-1.5 shadow-[inset_0_2px_8px_rgba(0,0,0,0.9)] space-y-1 max-w-[500px]">
                 {/* Row 1: Function Row */}
                 <div className="grid grid-cols-12 gap-0.5 sm:gap-1">
                   {Array.from({ length: 12 }).map((_, i) => (
@@ -453,7 +453,7 @@ export function ProductMockup() {
             </div>
 
             {/* Centered Apple Force Touch Glass Trackpad */}
-            <div className="w-36 sm:w-42 h-9 sm:h-11 mx-auto rounded-lg bg-[#0e141f] border border-[#232d3d] mt-1.5 shadow-inner relative">
+            <div className="w-32 sm:w-38 h-9 sm:h-11 mx-auto rounded-lg bg-[#0e141f] border border-[#232d3d] mt-1.5 shadow-inner relative">
               <div className="absolute top-0 inset-x-2 h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent" />
             </div>
 
