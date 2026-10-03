@@ -61,10 +61,14 @@ export function PricingSection({ onOpenDemo }: PricingSectionProps) {
   return (
     <section id="fiyatlandirma" className="py-24 relative overflow-hidden bg-[#070b12] border-t border-[#1f2d3d]/50">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#2357c5]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-b from-[#2357c5]/15 via-[#1a439c]/10 to-transparent rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0d1624] border border-[#1f2d40] text-xs font-mono font-bold text-[#8fb4ff] mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#2357c5] animate-pulse" />
+            ŞEFFAF & SINIRSIZ LİSANS
+          </div>
           <h2 className="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight">
             Şeffaf Fiyatlandırma.{" "}
             <span className="text-[#8fb4ff]">Tüm Güç Tek Pakette.</span>
@@ -75,7 +79,7 @@ export function PricingSection({ onOpenDemo }: PricingSectionProps) {
           </p>
 
           {/* Billing Cycle Toggle */}
-          <div className="mt-8 inline-flex items-center gap-2 p-1.5 rounded-2xl bg-[#0c1421] border border-[#1f2d3d]">
+          <div className="mt-8 inline-flex items-center gap-1.5 p-1.5 rounded-2xl bg-[#0c1421] border border-[#1f2d3d] shadow-lg">
             <button
               type="button"
               onClick={() => setBillingCycle("monthly")}
@@ -107,17 +111,17 @@ export function PricingSection({ onOpenDemo }: PricingSectionProps) {
         </div>
 
         {/* Single Comprehensive Plan Card */}
-        <div className="max-w-4xl mx-auto rounded-3xl bg-gradient-to-b from-[#0f1d33] via-[#0b1422] to-[#070b12] border-2 border-[#2357c5]/80 p-8 sm:p-12 shadow-[0_0_60px_rgba(35,87,197,0.25)] relative">
+        <div className="max-w-4xl mx-auto rounded-3xl bg-gradient-to-b from-[#0f1d33] via-[#0b1422] to-[#070b12] border-2 border-[#2357c5]/70 p-8 sm:p-12 shadow-[0_0_60px_rgba(35,87,197,0.25)] relative">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pb-10 border-b border-[#1f2d3d]">
             <div>
               <span className="text-xs font-mono font-bold text-[#8fb4ff] uppercase tracking-wider">
                 SINIRSIZ ERİŞİM
               </span>
               <h3 className="text-2xl sm:text-3xl font-black text-white font-heading mt-1">
-                WorksAuto Pro
+                WorksAuto Pro Atölye
               </h3>
               <p className="text-xs sm:text-sm text-[#9caac0] mt-2 max-w-md leading-relaxed">
-                İş emirlerinden dijital ikize, müşteri WhatsApp portalından GİB e-faturaya kadar her şey eksiksiz elinizin altında.
+                İş emirlerinden dijital ikize, müşteri WhatsApp canlı takibinden GİB e-faturaya kadar her şey sınırsız elinizin altında.
               </p>
             </div>
 
@@ -175,10 +179,10 @@ export function PricingSection({ onOpenDemo }: PricingSectionProps) {
             <a
               href="#demo-talep"
               onClick={onOpenDemo}
-              className="w-full sm:w-auto px-8 py-4 rounded-xl text-xs sm:text-sm font-bold font-heading bg-gradient-to-r from-[#2357c5] to-[#1a439c] text-white shadow-[0_0_25px_rgba(35,87,197,0.45)] hover:shadow-[0_0_35px_rgba(35,87,197,0.7)] border border-[#8fb4ff]/30 inline-flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl text-xs sm:text-sm font-bold font-heading bg-gradient-to-r from-[#2357c5] to-[#1a439c] text-white shadow-[0_0_25px_rgba(35,87,197,0.45)] hover:shadow-[0_0_35px_rgba(35,87,197,0.7)] border border-[#8fb4ff]/30 inline-flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer group"
             >
               <span>Servis Paketini Başlatın</span>
-              <ArrowRight size={16} />
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
         </div>
